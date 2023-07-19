@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testProject selectedBrowserProviderDeviceName="Full Screen" selectedBrowserProviderName="Desktop" selectedEnvironment="QA">
+  <title>/BSFPilotEngagement/.testproject</title>
+  <configPath>config</configPath>
+  <testsPath>tests</testsPath>
+  <testPlansPath>plans</testPlansPath>
+  <templatesPath>templates</templatesPath>
+  <sourcePath>src</sourcePath>
+  <secureStoragePath>.secrets</secureStoragePath>
+  <browserDebugPort>0</browserDebugPort>
+  <environments>
+    <environment name="QA">
+      <summary/>
+    </environment>
+  </environments>
+  <connectionClasses>
+    <connectionClass name="sf">
+      <connections>
+        <connection name="admin">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="3f40b191-9561-4fa3-ad6f-4016095f7cfa" url="sf:user=chilukuri.duragarao@redcross.org.releaseqa;password={password};securityToken={securityToken};environment=SANDBOX;lightningMode=true"/>
+          </connectionUrls>
+        </connection>
+        <connection id="56b5d29c-77f6-4f61-af80-ce097d396b32" name="DRDProfile">
+          <summary>This is for DRD Users</summary>
+          <connectionUrls>
+            <connectionUrl url="sf:user=micha.alt@redcross.org.releaseqa;environment=PROD_DEV;logonAsConnection=admin;lightningMode=true"/>
+          </connectionUrls>
+        </connection>
+        <connection id="26af064e-c12d-4e10-8068-6871cd364d99" name="admin_Test">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="32208d7f-2e0b-4152-8af7-87a674c97984" url="sf:user=chilukuri.duragarao@redcross.org.test;password={password};securityToken={securityToken};environment=SANDBOX;lightningMode=true"/>
+          </connectionUrls>
+        </connection>
+        <connection id="62d2d804-8c13-4d09-896b-ffa036803912" name="Drdmanager">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="sf:user=amber.adams2@redcross.org.releaseqa;environment=PROD_DEV;logonAsConnection=admin;lightningMode=true"/>
+          </connectionUrls>
+        </connection>
+        <connection id="e2edb852-cd70-486e-8764-f8b7881dc909" name="ApsSchedular">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="sf:user=jennifer.ganz@redcross.org.releaseqa;environment=PROD_DEV;logonAsConnection=admin"/>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+  </connectionClasses>
+  <browserConfigurations>
+    <browserConfiguration adjustBrowserWidthForChromeIde="true" browserHeight="0" browserWidth="0" name="Full Screen">
+      <summary>Full screen with Test Builder adjustment</summary>
+    </browserConfiguration>
+    <browserConfiguration browserHeight="768" browserHeightType="Pixels" browserWidth="1024" browserWidthType="Pixels" name="1024x768">
+      <summary>Fixed 1024x768</summary>
+    </browserConfiguration>
+    <browserConfiguration browserHeight="800" browserHeightType="Pixels" browserWidth="1280" browserWidthType="Pixels" name="1280x800">
+      <summary>Fixed 1280x800</summary>
+    </browserConfiguration>
+    <browserConfiguration browserHeight="768" browserHeightType="Pixels" browserWidth="1366" browserWidthType="Pixels" name="1366x768">
+      <summary>Fixed 1366x768</summary>
+    </browserConfiguration>
+    <browserConfiguration browserHeight="1080" browserHeightType="Pixels" browserWidth="1920" browserWidthType="Pixels" name="1920x1080">
+      <summary>Fixed 1920x1080</summary>
+    </browserConfiguration>
+  </browserConfigurations>
+  <browserApplications>
+    <browserApplication connectionTypes="sf" name="Salesforce1">
+      <properties>
+        <browserPlatformProperty name="browserName" platform="IOS" type="DesiredCapability" value="Safari"/>
+        <browserPlatformProperty name="browserName" platform="ANDROID" type="DesiredCapability" value="Chrome"/>
+      </properties>
+    </browserApplication>
+    <browserApplication connectionTypes="sf" name="ServiceMax FSA">
+      <properties>
+        <browserPlatformProperty name="bundleId" platform="IOS" type="DesiredCapability" value="com.servicemaxinc.svmxfieldserviceapp"/>
+        <browserPlatformProperty name="app" platform="DESKTOP" type="DesiredCapability" value="C:\\Program Files\\ServiceMax\\ServiceMax Field Service\\Laptop Mobile.exe"/>
+      </properties>
+    </browserApplication>
+  </browserApplications>
+  <browserProviders>
+    <browserProvider name="Desktop" type="SeleniumLocal">
+      <devices>
+        <browserProviderDevice name="Full Screen">
+          <properties>
+            <browserPlatformProperty name="summary" value="Full screen with Test Builder adjustment"/>
+            <browserPlatformProperty name="browserHeightType" value="Full"/>
+            <browserPlatformProperty name="browserWidthType" value="Full"/>
+            <browserPlatformProperty name="adjustBrowserWidthForChromeIde" value="true"/>
+          </properties>
+        </browserProviderDevice>
+        <browserProviderDevice name="1024x768">
+          <properties>
+            <browserPlatformProperty name="summary" value="Fixed 1024x768"/>
+            <browserPlatformProperty name="browserHeightType" value="Pixels"/>
+            <browserPlatformProperty name="browserWidthType" value="Pixels"/>
+            <browserPlatformProperty name="browserHeight" value="768"/>
+            <browserPlatformProperty name="browserWidth" value="1024"/>
+          </properties>
+        </browserProviderDevice>
+        <browserProviderDevice name="1280x800">
+          <properties>
+            <browserPlatformProperty name="summary" value="Fixed 1280x800"/>
+            <browserPlatformProperty name="browserHeightType" value="Pixels"/>
+            <browserPlatformProperty name="browserWidthType" value="Pixels"/>
+            <browserPlatformProperty name="browserHeight" value="800"/>
+            <browserPlatformProperty name="browserWidth" value="1280"/>
+          </properties>
+        </browserProviderDevice>
+        <browserProviderDevice name="1366x768">
+          <properties>
+            <browserPlatformProperty name="summary" value="Fixed 1366x768"/>
+            <browserPlatformProperty name="browserHeightType" value="Pixels"/>
+            <browserPlatformProperty name="browserWidthType" value="Pixels"/>
+            <browserPlatformProperty name="browserHeight" value="768"/>
+            <browserPlatformProperty name="browserWidth" value="1366"/>
+          </properties>
+        </browserProviderDevice>
+        <browserProviderDevice name="1920x1080">
+          <properties>
+            <browserPlatformProperty name="summary" value="Fixed 1920x1080"/>
+            <browserPlatformProperty name="browserHeightType" value="Pixels"/>
+            <browserPlatformProperty name="browserWidthType" value="Pixels"/>
+            <browserPlatformProperty name="browserHeight" value="1080"/>
+            <browserPlatformProperty name="browserWidth" value="1920"/>
+          </properties>
+        </browserProviderDevice>
+      </devices>
+    </browserProvider>
+  </browserProviders>
+</testProject>
