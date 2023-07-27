@@ -8,6 +8,8 @@ Require-Bundle: com.provar.core.testapi,
  com.provar.core.lib.selenium,
  com.provar.core.model.ui,
  com.provar.testrunner,
- com.provar.plugins.sf.apis
+ com.provar.plugins.sf.apis,
+ com.google.guava
 Automatic-Module-Name: BSFPilotEngagement
 Bundle-RequiredExecutionEnvironment: JavaSE-11
+

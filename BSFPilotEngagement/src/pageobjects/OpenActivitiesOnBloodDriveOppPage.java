@@ -89,8 +89,19 @@ public class OpenActivitiesOnBloodDriveOppPage {
 
 			newDate.equals(date2);
 
-		} else {
+		} else if(dayofweek1.contains("Sunday")){
 		
+		    Calendar calendar = Calendar.getInstance();
+			calendar.setTime(date1);
+			int daysToSubtract = 4;
+			calendar.add(Calendar.DAY_OF_MONTH, -daysToSubtract);
+			Date newDate = calendar.getTime();
+			System.out.println("Original Date: " + date1);
+			System.out.println("New Date: " + newDate);
+			
+			newDate.equals(date2);
+
+		}else{
 		    Calendar calendar = Calendar.getInstance();
 			calendar.setTime(date1);
 			int daysToSubtract = 3;
@@ -100,61 +111,13 @@ public class OpenActivitiesOnBloodDriveOppPage {
 			System.out.println("New Date: " + newDate);
 			
 			newDate.equals(date2);
-
+		
+		
 		}
 
 	}
 
-	public void verifyDueDate() throws ParseException {
-
-		// Drive Date
-		WebElement DriveDate = driver.findElement(
-				By.xpath("//span[text()='Drive Date']/ancestor::div[2]/descendant::lightning-formatted-text"));
-		String driveDate1 = DriveDate.getText().trim();
-
-		String sDate1 = driveDate1;
-		Date date1 = new SimpleDateFormat("MM/dd/yyyy").parse(sDate1);
-
-		Calendar c = Calendar.getInstance();
-		c.setTime(date1);
-		// String dayOfWeek = c.get(Calendar.);
-
-		Format f = new SimpleDateFormat("EEEE");
-		String str = f.format(date1);
-
-		// Due Date
-		WebElement DueDate = driver
-				.findElement(By.xpath("(//div[text()='Due Date:']/parent::div[1]/descendant::span)[2]"));
-		String dueDate1 = DueDate.getText().trim();
-
-		String sDate2 = dueDate1;
-		Date date2 = new SimpleDateFormat("MM/dd/yyyy").parse(sDate2);
-
-		Calendar c1 = Calendar.getInstance();
-		c.setTime(date2);
-		// String dayOfWeek = c.get(Calendar.);
-
-		Format f1 = new SimpleDateFormat("EEEE");
-		String str1 = f.format(date2).trim();
-
-		if (str.contains("Saturday") || str.contains("Sunday")) {
-
-			// String duedate=date2.toString();
-
-			LocalDate date = LocalDate.parse(sDate1);
-			LocalDate newDate = date.minusDays(5);
-
-			newDate.equals(date2);
-
-		} else {
-			LocalDate date = LocalDate.parse(sDate1);
-			LocalDate newDate = date.minusDays(3);
-
-			newDate.equals(date2);
-
-		}
-
-	}
+	
 
 	@TextType()
 	@FindBy(xpath = "//th[@data-label='Account']/descendant::a//span")

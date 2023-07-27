@@ -17,7 +17,9 @@ public class LeadDetailPage {
 	@ButtonType()
 	@FindBy(xpath = "//button[normalize-space(.)='Convert']")
 	public WebElement Convert;
-	@FindBy(xpath = "//span[contains(text(),\"Don't create an blood drive opportunity upon conve\")]/parent::label")
+	@FindBy(xpath = "//span[contains(text(),'upon conversion')]/parent::label")
+
+
 	@BooleanType()
 	public WebElement doNotCreateOpportunity;
 	@ButtonType()

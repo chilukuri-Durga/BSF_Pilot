@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testProject selectedBrowserProviderDeviceName="Full Screen" selectedBrowserProviderName="Desktop" selectedEnvironment="QA">
+<testProject selectedBrowserProviderDeviceName="Full Screen" selectedBrowserProviderName="Desktop" selectedEnvironment="Test">
   <title>/BSFPilotEngagement/.testproject</title>
   <configPath>config</configPath>
   <testsPath>tests</testsPath>
@@ -12,6 +12,9 @@
     <environment name="QA">
       <summary/>
     </environment>
+    <environment name="Test">
+      <summary/>
+    </environment>
   </environments>
   <connectionClasses>
     <connectionClass name="sf">
@@ -20,30 +23,47 @@
           <summary/>
           <connectionUrls>
             <connectionUrl secureStorageNodeId="3f40b191-9561-4fa3-ad6f-4016095f7cfa" url="sf:user=chilukuri.duragarao@redcross.org.releaseqa;password={password};securityToken={securityToken};environment=SANDBOX;lightningMode=true"/>
+            <connectionUrl envName="QA" secureStorageNodeId="71df1a07-905d-4212-b3de-2b8c2b106c05" url="sf:user=chilukuri.duragarao@redcross.org.releaseqa;password={password};securityToken={securityToken};environment=SANDBOX;lightningMode=true"/>
+            <connectionUrl envName="Test" secureStorageNodeId="ae8057a3-9b6c-4ae9-ae0e-45117f46d9e4" url="sf:user=chilukuri.duragarao@redcross.org.test;password={password};securityToken={securityToken};environment=SANDBOX;lightningMode=true"/>
           </connectionUrls>
         </connection>
         <connection id="56b5d29c-77f6-4f61-af80-ce097d396b32" name="DRDProfile">
           <summary>This is for DRD Users</summary>
           <connectionUrls>
             <connectionUrl url="sf:user=micha.alt@redcross.org.releaseqa;environment=PROD_DEV;logonAsConnection=admin;lightningMode=true"/>
-          </connectionUrls>
-        </connection>
-        <connection id="26af064e-c12d-4e10-8068-6871cd364d99" name="admin_Test">
-          <summary/>
-          <connectionUrls>
-            <connectionUrl secureStorageNodeId="32208d7f-2e0b-4152-8af7-87a674c97984" url="sf:user=chilukuri.duragarao@redcross.org.test;password={password};securityToken={securityToken};environment=SANDBOX;lightningMode=true"/>
+            <connectionUrl envName="QA" url="sf:user=micha.alt@redcross.org.releaseqa;environment=PROD_DEV;logonAsConnection=admin;lightningMode=true"/>
+            <connectionUrl envName="Test" url="sf:user=micha.alt@redcross.org.test;environment=PROD_DEV;logonAsConnection=admin"/>
           </connectionUrls>
         </connection>
         <connection id="62d2d804-8c13-4d09-896b-ffa036803912" name="Drdmanager">
           <summary/>
           <connectionUrls>
             <connectionUrl url="sf:user=amber.adams2@redcross.org.releaseqa;environment=PROD_DEV;logonAsConnection=admin;lightningMode=true"/>
+            <connectionUrl envName="QA" url="sf:user=amber.adams2@redcross.org.releaseqa;environment=PROD_DEV;logonAsConnection=admin"/>
+            <connectionUrl envName="Test" url="sf:user=amber.adams2@redcross.org.test;environment=PROD_DEV;logonAsConnection=admin;lightningMode=true"/>
           </connectionUrls>
         </connection>
         <connection id="e2edb852-cd70-486e-8764-f8b7881dc909" name="ApsSchedular">
           <summary/>
           <connectionUrls>
             <connectionUrl url="sf:user=jennifer.ganz@redcross.org.releaseqa;environment=PROD_DEV;logonAsConnection=admin"/>
+            <connectionUrl envName="QA" url="sf:user=jennifer.ganz@redcross.org.releaseqa;environment=PROD_DEV;logonAsConnection=admin;lightningMode=true"/>
+            <connectionUrl envName="Test" url="sf:user=kim.abubakar@redcross.org.test;environment=PROD_DEV;logonAsConnection=admin;lightningMode=true"/>
+          </connectionUrls>
+        </connection>
+        <connection id="e0f550ec-138a-40a2-8933-a41ff6341931" name="apsPlanner">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="sf:user=amanda.hayduk@redcross.org.releaseqa;environment=PROD_DEV;logonAsConnection=admin"/>
+            <connectionUrl envName="QA" url="sf:user=amanda.hayduk@redcross.org.releaseqa;environment=PROD_DEV;logonAsConnection=admin"/>
+            <connectionUrl envName="Test" url="sf:user=amanda.hayduk@redcross.org.test;environment=PROD_DEV;logonAsConnection=admin"/>
+          </connectionUrls>
+        </connection>
+        <connection id="aa37cc51-6d79-40f8-86da-51ddb4dafe85" name="CollectionManagement">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="sf:user=anyjiah.whitfield@redcross.org.test;environment=PROD_DEV;logonAsConnection=admin;lightningMode=true"/>
+            <connectionUrl envName="Test" url="sf:user=anyjiah.whitfield@redcross.org.test;environment=PROD_DEV;logonAsConnection=admin"/>
           </connectionUrls>
         </connection>
       </connections>

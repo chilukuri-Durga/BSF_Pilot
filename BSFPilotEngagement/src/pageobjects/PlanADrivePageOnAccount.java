@@ -23,7 +23,7 @@ public class PlanADrivePageOnAccount {
 	@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//button[@name='Account.Plan_a_Mobile_Drive']")
 	public WebElement Account_Plan_a_Mobile_Drive;
 
-	@FindBy(xpath = "//div[contains(@class, 'active') and contains(@class, 'open') and (contains(@class, 'forceModal') or contains(@class, 'uiModal'))][last()]//span/lightning-formatted-rich-text/span[normalize-space(.)='7Eleven SB1 - Auditorium RM1']")
+	@FindBy(xpath = "//input[@name='Select_AccountSite']/ancestor::div[1]/descendant::label")
 	@TextType()
 	public WebElement selectSite;
 
@@ -84,8 +84,12 @@ public class PlanADrivePageOnAccount {
 	public WebElement next2;
 
 	@TextType()
-	@FindBy(xpath = "//input[@name='Targeted_Ask_Date_Only']")
+	@FindBy(xpath = "//input[@name='Targeted_Ask_Date']")
 	public WebElement targetAskDate;
+	
+	@TextType()
+	@FindBy(xpath = "//input[@name='Close_Date']")
+	public WebElement closedDate;
 
 	@ButtonType()
 	@FindBy(xpath = "//div[contains(@class, 'active') and contains(@class, 'open') and (contains(@class, 'forceModal') or contains(@class, 'uiModal'))][last()]//button[normalize-space(.)='Next']")
@@ -134,5 +138,23 @@ public class PlanADrivePageOnAccount {
 	@TextType()
 	@FindBy(xpath = "//div[contains(@class, 'active') and contains(@class, 'open') and (contains(@class, 'forceModal') or contains(@class, 'uiModal'))][last()]//span[normalize-space(.)='This error occurred when the flow tried to create records: FIELD_CUSTOM_VALIDATION_EXCEPTION: This drive date violates the 56 day rule.Please acknowledge.. You can look up ExceptionCode values in the SOAP API Developer Guide.']")
 	public WebElement _6DaysViolationRule;
+
+	@TextType()
+	@FindBy(xpath = "//input[@name='Targeted_Ask_Date']")
+	public WebElement pickAYear;
+	
+	@TextType()
+	@FindBy(xpath = "//h2[contains(text(),'Plan a Drive')]")
+	public WebElement planadrive;
+	
+	public void selectTargetDate(String Date){
+	
+	
+	driver.findElement(By.xpath("//input[@name='Targeted_Ask_Date']")).sendKeys(Date);
+	}
+
+	@TextType()
+	@FindBy(xpath = "//div[contains(@class, 'active') and contains(@class, 'open') and (contains(@class, 'forceModal') or contains(@class, 'uiModal'))][last()]//div[@id='input-error-2-2108']/lightning-formatted-rich-text/span")
+	public WebElement pickAYeartarget;
 
 }

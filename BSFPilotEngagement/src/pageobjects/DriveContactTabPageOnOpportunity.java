@@ -21,7 +21,7 @@ public class DriveContactTabPageOnOpportunity {
 	@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//lst-related-list-single-aura-wrapper//a[@data-aura-class='forceOutputLookup']")
 	public WebElement ContactName;
 	@LinkType()
-	@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//a[normalize-space(.)='Add Drive Service Roles']")
+	@FindBy(xpath = "//a[contains(@title,'Add Drive Service Roles')]")
 	public WebElement AddDriveServiceRolesBtn;
 	@TextType()
 	@FindBy(xpath = "//input[@title='Search Contacts']")
@@ -42,8 +42,8 @@ public class DriveContactTabPageOnOpportunity {
 	@FindBy(xpath = "//div[contains(@class, 'active') and contains(@class, 'open') and (contains(@class, 'forceModal') or contains(@class, 'uiModal'))][last()]//button[normalize-space(.)='Save']")
 	public WebElement save;
 	@LinkType()
-	@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//a[normalize-space(.)='View AllDrive Service Roles']")
-	public WebElement ViewAll2;
+	@FindBy(xpath = "(//*[contains(@title,'Drive Service')])[1]")
+	public WebElement DriveServiceRoleSec;
 	@TextType()
 	@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//a[normalize-space(.)='A. Brooke Phelps']")
 	public WebElement verifySecondarycontactName;

@@ -1,58 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="11" registryId="afc34982-d5ab-4237-b877-329fa74ef2bf" visibility="Internal">
+<testCase id="21" registryId="afc34982-d5ab-4237-b877-329fa74ef2bf">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="79" title="Salesforce Connect: drdprofile (Test)">
-      <tags>
-        <string>disabled</string>
-      </tags>
-      <arguments>
-        <argument argId="8d0cba6d-6e73-461c-aea6-7b94ef327d83" id="connectionName">
-          <value class="variable">
-            <path element="connectionName"/>
-          </value>
-        </argument>
-        <argument argId="42b0e398-c4b0-4c94-a093-a3d2e9249f6c" id="reuseConnectionName">
-          <value class="variable">
-            <path element="reuseConnectionName"/>
-          </value>
-        </argument>
-        <argument argId="f93770aa-c19f-4962-880f-db8d5da7c7ac" id="resultName">
-          <value class="value" valueClass="string">drdprofile</value>
-        </argument>
-        <argument id="resultScope">
-          <value class="value" valueClass="string">Test</value>
-        </argument>
-        <argument id="alreadyOpenBehaviour">
-          <value class="value" valueClass="string">Reuse</value>
-        </argument>
-        <argument id="uiApplicationName">
-          <value class="value" valueClass="string">BSF</value>
-        </argument>
-        <argument id="closeAllPrimaryTabs">
-          <value class="value" valueClass="boolean">true</value>
-        </argument>
-        <argument id="quickUiLogin">
-          <value class="value" valueClass="boolean">true</value>
-        </argument>
-        <argument id="privateBrowsingMode"/>
-        <argument id="enableObjectIdLogging">
-          <value class="value" valueClass="boolean">true</value>
-        </argument>
-        <argument id="autoCleanup"/>
-        <argument id="cleanupConnectionName"/>
-        <argument id="logFileLocation"/>
-        <argument id="username"/>
-        <argument id="password"/>
-        <argument id="securityToken"/>
-        <argument id="environment"/>
-        <argument id="lightningMode">
-          <value class="value" valueClass="string">default</value>
-        </argument>
-        <argument id="webBrowser"/>
-      </arguments>
-      <parameterValueSources/>
-    </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="172" title="Salesforce Connect: drdprofile (Test)">
       <arguments>
         <argument argId="8d0cba6d-6e73-461c-aea6-7b94ef327d83" id="connectionName">
@@ -100,6 +49,9 @@
       <parameterValueSources/>
     </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="87" title="Set Values: LeadSource">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="values">
           <value class="valueList" mutable="Mutable">
@@ -119,6 +71,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="88" title="Set Values: Salutation">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="values">
           <value class="valueList" mutable="Mutable">
@@ -138,6 +93,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="90" title="Set Values: Firstname">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="values">
           <value class="valueList" mutable="Mutable">
@@ -166,6 +124,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="91" title="Set Values: Lastname">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="values">
           <value class="valueList" mutable="Mutable">
@@ -194,6 +155,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="94" title="Set Values: Email">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="values">
           <value class="valueList" mutable="Mutable">
@@ -227,6 +191,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="95" title="Set Values: Phone">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="values">
           <value class="valueList" mutable="Mutable">
@@ -281,6 +248,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="93" title="Set Values: PhoneType">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="values">
           <value class="valueList" mutable="Mutable">
@@ -300,6 +270,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="100" title="Set Values: TotalCompanySize">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="values">
           <value class="valueList" mutable="Mutable">
@@ -319,6 +292,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="99" title="Set Values: Company">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="values">
           <value class="valueList" mutable="Mutable">
@@ -347,6 +323,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="98" title="Set Values: IndustryCode">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="values">
           <value class="valueList" mutable="Mutable">
@@ -366,6 +345,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="97" title="Set Values: Website">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="values">
           <value class="valueList" mutable="Mutable">
@@ -399,6 +381,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="96" title="Set Values: Street">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="values">
           <value class="valueList" mutable="Mutable">
@@ -418,6 +403,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="102" title="Set Values: City">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="values">
           <value class="valueList" mutable="Mutable">
@@ -437,6 +425,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="103" title="Set Values: StateCode">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="values">
           <value class="valueList" mutable="Mutable">
@@ -456,6 +447,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="101" title="Set Values: PostalCode">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="values">
           <value class="valueList" mutable="Mutable">
@@ -475,6 +469,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="89" title="Set Values: HasPersonalStory">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="values">
           <value class="valueList" mutable="Mutable">
@@ -494,6 +491,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="85" title="Set Values: AccountType">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="values">
           <value class="valueList" mutable="Mutable">
@@ -512,7 +512,264 @@
         </argument>
       </arguments>
     </apiCall>
+    <caseCall testCaseId="db1a8ec1-fa15-46ad-965e-b53c2a83d614" testCasePath="tests/DeleteLead.teardown" testItemId="228">
+      <arguments>
+        <argument id="reuseConnectionName">
+          <value class="value" valueClass="string">drdprofile</value>
+        </argument>
+        <argument id="Company">
+          <value class="variable">
+            <path element="Data"/>
+            <path element="Company"/>
+          </value>
+        </argument>
+        <argument id="FirstName">
+          <value class="variable">
+            <path element="Data"/>
+            <path element="FirstName"/>
+          </value>
+        </argument>
+      </arguments>
+    </caseCall>
+    <caseCall testCaseId="814e09c8-1688-4a10-8ce4-2741d56a4305" testCasePath="tests/DeleteSkedDrive.teardown" testItemId="229">
+      <tags/>
+      <arguments>
+        <argument id="reuseConnectionName">
+          <value class="value" valueClass="string">drdprofile</value>
+        </argument>
+        <argument id="Company">
+          <value class="variable">
+            <path element="Data"/>
+            <path element="Company"/>
+          </value>
+        </argument>
+      </arguments>
+    </caseCall>
+    <caseCall testCaseId="2d34f253-0a25-487b-b468-5a9a80b56ece" testCasePath="tests/DeleteOpp.teardown" testItemId="230">
+      <tags/>
+      <arguments>
+        <argument id="reuseConnectionName">
+          <value class="value" valueClass="string">drdprofile</value>
+        </argument>
+        <argument id="Company">
+          <value class="variable">
+            <path element="Data"/>
+            <path element="Company"/>
+          </value>
+        </argument>
+      </arguments>
+    </caseCall>
+    <caseCall testCaseId="b9ccf59c-1316-47f7-839e-8e440faded3f" testCasePath="tests/DeleteContact.teardown" testItemId="231">
+      <tags/>
+      <arguments>
+        <argument id="reuseConnectionName">
+          <value class="value" valueClass="string">drdprofile</value>
+        </argument>
+        <argument id="FirstName">
+          <value class="variable">
+            <path element="Data"/>
+            <path element="FirstName"/>
+          </value>
+        </argument>
+      </arguments>
+    </caseCall>
+    <caseCall testCaseId="a4d25a1d-4c5e-406c-a14e-62459246785c" testCasePath="tests/DeleteAccount.teardown" testItemId="232">
+      <tags/>
+      <arguments>
+        <argument id="reuseConnectionName">
+          <value class="value" valueClass="string">drdprofile</value>
+        </argument>
+        <argument id="Company">
+          <value class="variable">
+            <path element="Data"/>
+            <path element="Company"/>
+          </value>
+        </argument>
+      </arguments>
+    </caseCall>
+    <caseCall testCaseId="20ec7f55-a835-449a-b105-249940b1885b" testCasePath="tests/LeadGenerationAPI.testcase" testItemId="227">
+      <arguments>
+        <argument id="Company">
+          <value class="variable">
+            <path element="Data"/>
+            <path element="Company"/>
+          </value>
+        </argument>
+        <argument id="reuseConnectionName">
+          <value class="value" valueClass="string">drdprofile</value>
+        </argument>
+        <argument id="FirstName">
+          <value class="variable">
+            <path element="Data"/>
+            <path element="FirstName"/>
+          </value>
+        </argument>
+        <argument id="LastName">
+          <value class="variable">
+            <path element="Data"/>
+            <path element="LastName"/>
+          </value>
+        </argument>
+        <argument id="Street">
+          <value class="variable">
+            <path element="Data"/>
+            <path element="Street"/>
+          </value>
+        </argument>
+        <argument id="City">
+          <value class="variable">
+            <path element="Data"/>
+            <path element="City"/>
+          </value>
+        </argument>
+        <argument id="StateCode">
+          <value class="variable">
+            <path element="Data"/>
+            <path element="StateCode"/>
+          </value>
+        </argument>
+        <argument id="PostalCode">
+          <value class="variable">
+            <path element="Data"/>
+            <path element="PostalCode"/>
+          </value>
+        </argument>
+        <argument id="Email">
+          <value class="compound">
+            <parts>
+              <funcCall id="UniqueId">
+                <argument id="length">
+                  <value class="value" valueClass="decimal">6</value>
+                </argument>
+                <argument id="format">
+                  <value class="variable">
+                    <path element="ALPHA"/>
+                  </value>
+                </argument>
+              </funcCall>
+              <value valueClass="string">@redcorss.org</value>
+            </parts>
+          </value>
+        </argument>
+        <argument id="LeadSource">
+          <value class="compound">
+            <parts>
+              <funcCall id="UniqueId">
+                <argument id="length">
+                  <value class="value" valueClass="decimal">6</value>
+                </argument>
+                <argument id="format">
+                  <value class="variable">
+                    <path element="ALPHA"/>
+                  </value>
+                </argument>
+              </funcCall>
+              <value valueClass="string">.com</value>
+            </parts>
+          </value>
+        </argument>
+        <argument id="Website">
+          <value class="variable">
+            <path element="Data"/>
+            <path element="Website"/>
+          </value>
+        </argument>
+        <argument id="PhoneType">
+          <value class="variable">
+            <path element="Data"/>
+            <path element="PhoneType"/>
+          </value>
+        </argument>
+        <argument id="TotalCompanySize">
+          <value class="variable">
+            <path element="Data"/>
+            <path element="TotalCompanySize"/>
+          </value>
+        </argument>
+        <argument id="IndustryCode">
+          <value class="variable">
+            <path element="Data"/>
+            <path element="IndustryCode"/>
+          </value>
+        </argument>
+        <argument id="AccountType">
+          <value class="variable">
+            <path element="Data"/>
+            <path element="AccountType"/>
+          </value>
+        </argument>
+        <argument id="Country">
+          <value class="variable">
+            <path element="Data"/>
+            <path element="Country"/>
+          </value>
+        </argument>
+      </arguments>
+      <outputArguments>
+        <outputArgument id="LeadId">
+          <name class="value" valueClass="string">LeadId</name>
+        </outputArgument>
+      </outputArguments>
+    </caseCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="233" title="On SF Lead (Biomed Recruitment) View screen">
+      <arguments>
+        <argument id="uiConnectionName">
+          <value class="value" valueClass="string">drdprofile</value>
+        </argument>
+        <argument id="target">
+          <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=View&amp;recordType=Biomed+Recruitment"/>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On SF Lead (Biomed Recruitment) View screen</value>
+        </argument>
+        <argument id="navigate">
+          <value class="value" valueClass="string">Always</value>
+        </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Maximize</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="sfUiTargetObjectId">
+          <value class="variable">
+            <path element="LeadId"/>
+          </value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="904">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="914" title="Sleep for {10} seconds">
+              <arguments>
+                <argument id="sleepSecs">
+                  <value class="value" valueClass="decimal">10</value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+      <generatedParameters>
+        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
+          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="2" title="On LeadNavigationPage page">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">drdprofile</value>
@@ -647,6 +904,9 @@
               </generatedParameters>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="5" title="On LeadRecordTypePage page">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">drdprofile</value>
@@ -730,6 +990,9 @@
                       </generatedParameters>
                     </apiCall>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="198" title="On LeadCreationPage page">
+                      <tags>
+                        <string>disabled</string>
+                      </tags>
                       <arguments>
                         <argument id="uiConnectionName">
                           <value class="value" valueClass="string">drdprofile</value>
@@ -761,21 +1024,16 @@
                       <clauses>
                         <clause name="substeps" testItemId="9">
                           <steps>
-                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="37" title="Set the Lead Source 1 to {LeadSource}">
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="37" title="Set the Lead Source to {LeadSource}">
+                              <tags>
+                                <string>disabled</string>
+                              </tags>
                               <arguments>
                                 <argument id="locator">
-                                  <value class="uiLocator" uri="ui:pageobject:field?field=LeadSource1&amp;pageId=pageobjects.LeadCreationPage"/>
+                                  <value class="uiLocator" uri="ui:pageobject:field?field=LeadSource&amp;pageId=pageobjects.LeadCreationPage"/>
                                 </argument>
                                 <argument id="interaction">
                                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
-                                </argument>
-                                <argument id="value">
-                                  <value class="variable">
-                                    <path element="LeadSource"/>
-                                  </value>
-                                </argument>
-                                <argument id="blur">
-                                  <value class="value" valueClass="boolean">true</value>
                                 </argument>
                                 <argument id="pressEnter">
                                   <value class="value" valueClass="boolean">false</value>
@@ -793,9 +1051,16 @@
                                   <value class="uiWait" uri="default"/>
                                 </argument>
                                 <argument id="interactionDescription">
-                                  <value class="value" valueClass="string">Set the Lead Source 1 to {LeadSource}</value>
+                                  <value class="value" valueClass="string">Set the Lead Source to {LeadSource}</value>
                                 </argument>
                                 <argument id="autoRetry"/>
+                                <argument id="param_IndustryCode"/>
+                                <argument id="value">
+                                  <value class="variable">
+                                    <path element="LeadSource"/>
+                                  </value>
+                                </argument>
+                                <argument id="blur"/>
                               </arguments>
                               <generatedParameters>
                                 <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
@@ -822,21 +1087,14 @@
                                 </apiParam>
                               </generatedParameters>
                             </apiCall>
-                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="39" title="Set the Salutation 1 to {Salutation}">
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="222" title="Call the selectLeadSource method">
+                              <tags/>
                               <arguments>
                                 <argument id="locator">
-                                  <value class="uiLocator" uri="ui:pageobject:field?field=Salutation1&amp;pageId=pageobjects.LeadCreationPage"/>
+                                  <value class="uiLocator" uri="ui:pageobject:method?operation=selectLeadSource&amp;pageId=pageobjects.LeadCreationPage"/>
                                 </argument>
                                 <argument id="interaction">
-                                  <value class="uiInteraction" uri="ui:interaction?name=set"/>
-                                </argument>
-                                <argument id="value">
-                                  <value class="variable">
-                                    <path element="Salutation"/>
-                                  </value>
-                                </argument>
-                                <argument id="blur">
-                                  <value class="value" valueClass="boolean">true</value>
+                                  <value class="uiInteraction" uri="ui:interaction?name=invoke"/>
                                 </argument>
                                 <argument id="pressEnter">
                                   <value class="value" valueClass="boolean">false</value>
@@ -854,9 +1112,84 @@
                                   <value class="uiWait" uri="default"/>
                                 </argument>
                                 <argument id="interactionDescription">
-                                  <value class="value" valueClass="string">Set the Salutation 1 to {Salutation}</value>
+                                  <value class="value" valueClass="string">Call the selectLeadSource method</value>
                                 </argument>
                                 <argument id="autoRetry"/>
+                                <argument id="param_IndustryCode"/>
+                                <argument id="param_LeadSource">
+                                  <value class="variable">
+                                    <path element="LeadSource"/>
+                                  </value>
+                                </argument>
+                                <argument id="value"/>
+                                <argument id="blur"/>
+                              </arguments>
+                              <generatedParameters>
+                                <apiParam group="value" name="param_LeadSource" title="Lead Source">
+                                  <type>
+                                    <textType/>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
+                                  <summary>The value to be populated.</summary>
+                                  <type>
+                                    <textType>
+                                      <constraints>
+                                        <valueConstraint name="mimeType">text/plain</valueConstraint>
+                                      </constraints>
+                                    </textType>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
+                                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
+                                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                              </generatedParameters>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="39" title="Set the Salutation to {Salutation}">
+                              <tags>
+                                <string>disabled</string>
+                              </tags>
+                              <arguments>
+                                <argument id="locator">
+                                  <value class="uiLocator" uri="ui:pageobject:field?field=Salutation&amp;pageId=pageobjects.LeadCreationPage"/>
+                                </argument>
+                                <argument id="interaction">
+                                  <value class="uiInteraction" uri="ui:interaction?name=set"/>
+                                </argument>
+                                <argument id="pressEnter">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="captureBefore">
+                                  <value class="value" valueClass="string">false</value>
+                                </argument>
+                                <argument id="captureAfter">
+                                  <value class="value" valueClass="string">false</value>
+                                </argument>
+                                <argument id="beforeWait">
+                                  <value class="uiWait" uri="default"/>
+                                </argument>
+                                <argument id="afterWait">
+                                  <value class="uiWait" uri="default"/>
+                                </argument>
+                                <argument id="interactionDescription">
+                                  <value class="value" valueClass="string">Set the Salutation to {Salutation}</value>
+                                </argument>
+                                <argument id="autoRetry"/>
+                                <argument id="value">
+                                  <value class="variable">
+                                    <path element="Salutation"/>
+                                  </value>
+                                </argument>
+                                <argument id="blur"/>
                               </arguments>
                               <generatedParameters>
                                 <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
@@ -920,6 +1253,74 @@
                                 <argument id="autoRetry"/>
                               </arguments>
                               <generatedParameters>
+                                <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
+                                  <summary>The value to be populated.</summary>
+                                  <type>
+                                    <textType>
+                                      <constraints>
+                                        <valueConstraint name="mimeType">text/plain</valueConstraint>
+                                      </constraints>
+                                    </textType>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
+                                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
+                                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                              </generatedParameters>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="223" title="Call the selectSalutation method">
+                              <tags>
+                                <string>disabled</string>
+                              </tags>
+                              <arguments>
+                                <argument id="locator">
+                                  <value class="uiLocator" uri="ui:pageobject:method?operation=selectSalutation&amp;pageId=pageobjects.LeadCreationPage"/>
+                                </argument>
+                                <argument id="interaction">
+                                  <value class="uiInteraction" uri="ui:interaction?name=invoke"/>
+                                </argument>
+                                <argument id="pressEnter">
+                                  <value class="value" valueClass="boolean">true</value>
+                                </argument>
+                                <argument id="captureBefore">
+                                  <value class="value" valueClass="string">false</value>
+                                </argument>
+                                <argument id="captureAfter">
+                                  <value class="value" valueClass="string">false</value>
+                                </argument>
+                                <argument id="beforeWait">
+                                  <value class="uiWait" uri="default"/>
+                                </argument>
+                                <argument id="afterWait">
+                                  <value class="uiWait" uri="default"/>
+                                </argument>
+                                <argument id="interactionDescription">
+                                  <value class="value" valueClass="string">Call the selectSalutation method</value>
+                                </argument>
+                                <argument id="autoRetry"/>
+                                <argument id="param_Salutation">
+                                  <value class="variable">
+                                    <path element="Salutation"/>
+                                  </value>
+                                </argument>
+                                <argument id="value"/>
+                                <argument id="blur"/>
+                              </arguments>
+                              <generatedParameters>
+                                <apiParam group="value" name="param_Salutation" title="Salutation">
+                                  <type>
+                                    <textType/>
+                                  </type>
+                                </apiParam>
                                 <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
                                   <summary>The value to be populated.</summary>
                                   <type>
@@ -1066,21 +1467,16 @@
                                 </apiParam>
                               </generatedParameters>
                             </apiCall>
-                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="206" title="Set the Phone_ Type__c 1 to {PhoneType}">
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="206" title="Set the Phone_ Type__c to {PhoneType}">
+                              <tags>
+                                <string>disabled</string>
+                              </tags>
                               <arguments>
                                 <argument id="locator">
-                                  <value class="uiLocator" uri="ui:pageobject:field?field=Phone_Type__c1&amp;pageId=pageobjects.LeadCreationPage"/>
+                                  <value class="uiLocator" uri="ui:pageobject:field?field=Phone_Type__c&amp;pageId=pageobjects.LeadCreationPage"/>
                                 </argument>
                                 <argument id="interaction">
                                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
-                                </argument>
-                                <argument id="value">
-                                  <value class="variable">
-                                    <path element="PhoneType"/>
-                                  </value>
-                                </argument>
-                                <argument id="blur">
-                                  <value class="value" valueClass="boolean">false</value>
                                 </argument>
                                 <argument id="pressEnter">
                                   <value class="value" valueClass="boolean">false</value>
@@ -1098,11 +1494,82 @@
                                   <value class="uiWait" uri="default"/>
                                 </argument>
                                 <argument id="interactionDescription">
-                                  <value class="value" valueClass="string">Set the Phone_ Type__c 1 to {PhoneType}</value>
+                                  <value class="value" valueClass="string">Set the Phone_ Type__c to {PhoneType}</value>
                                 </argument>
                                 <argument id="autoRetry"/>
+                                <argument id="value">
+                                  <value class="variable">
+                                    <path element="PhoneType"/>
+                                  </value>
+                                </argument>
+                                <argument id="blur"/>
                               </arguments>
                               <generatedParameters>
+                                <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
+                                  <summary>The value to be populated.</summary>
+                                  <type>
+                                    <textType>
+                                      <constraints>
+                                        <valueConstraint name="mimeType">text/plain</valueConstraint>
+                                      </constraints>
+                                    </textType>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
+                                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
+                                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                              </generatedParameters>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="224" title="Call the selectPhoneType method">
+                              <arguments>
+                                <argument id="locator">
+                                  <value class="uiLocator" uri="ui:pageobject:method?operation=selectPhoneType&amp;pageId=pageobjects.LeadCreationPage"/>
+                                </argument>
+                                <argument id="interaction">
+                                  <value class="uiInteraction" uri="ui:interaction?name=invoke"/>
+                                </argument>
+                                <argument id="pressEnter">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="captureBefore">
+                                  <value class="value" valueClass="string">false</value>
+                                </argument>
+                                <argument id="captureAfter">
+                                  <value class="value" valueClass="string">false</value>
+                                </argument>
+                                <argument id="beforeWait">
+                                  <value class="uiWait" uri="default"/>
+                                </argument>
+                                <argument id="afterWait">
+                                  <value class="uiWait" uri="default"/>
+                                </argument>
+                                <argument id="interactionDescription">
+                                  <value class="value" valueClass="string">Call the selectPhoneType method</value>
+                                </argument>
+                                <argument id="autoRetry"/>
+                                <argument id="param_PhoneType">
+                                  <value class="variable">
+                                    <path element="PhoneType"/>
+                                  </value>
+                                </argument>
+                                <argument id="value"/>
+                                <argument id="blur"/>
+                              </arguments>
+                              <generatedParameters>
+                                <apiParam group="value" name="param_PhoneType" title="Phone Type">
+                                  <type>
+                                    <textType/>
+                                  </type>
+                                </apiParam>
                                 <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
                                   <summary>The value to be populated.</summary>
                                   <type>
@@ -1250,20 +1717,15 @@
                               </generatedParameters>
                             </apiCall>
                             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="209" title="Set the Account_ Type__c to {AccountType}">
+                              <tags>
+                                <string>disabled</string>
+                              </tags>
                               <arguments>
                                 <argument id="locator">
                                   <value class="uiLocator" uri="ui:pageobject:field?field=Account_Type__c&amp;pageId=pageobjects.LeadCreationPage"/>
                                 </argument>
                                 <argument id="interaction">
                                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
-                                </argument>
-                                <argument id="value">
-                                  <value class="variable">
-                                    <path element="AccountType"/>
-                                  </value>
-                                </argument>
-                                <argument id="blur">
-                                  <value class="value" valueClass="boolean">false</value>
                                 </argument>
                                 <argument id="pressEnter">
                                   <value class="value" valueClass="boolean">false</value>
@@ -1284,8 +1746,79 @@
                                   <value class="value" valueClass="string">Set the Account_ Type__c to {AccountType}</value>
                                 </argument>
                                 <argument id="autoRetry"/>
+                                <argument id="value">
+                                  <value class="variable">
+                                    <path element="AccountType"/>
+                                  </value>
+                                </argument>
+                                <argument id="blur"/>
                               </arguments>
                               <generatedParameters>
+                                <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
+                                  <summary>The value to be populated.</summary>
+                                  <type>
+                                    <textType>
+                                      <constraints>
+                                        <valueConstraint name="mimeType">text/plain</valueConstraint>
+                                      </constraints>
+                                    </textType>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
+                                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
+                                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                              </generatedParameters>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="225" title="Call the selectAccountType method">
+                              <arguments>
+                                <argument id="locator">
+                                  <value class="uiLocator" uri="ui:pageobject:method?operation=selectAccountType&amp;pageId=pageobjects.LeadCreationPage"/>
+                                </argument>
+                                <argument id="interaction">
+                                  <value class="uiInteraction" uri="ui:interaction?name=invoke"/>
+                                </argument>
+                                <argument id="pressEnter">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="captureBefore">
+                                  <value class="value" valueClass="string">false</value>
+                                </argument>
+                                <argument id="captureAfter">
+                                  <value class="value" valueClass="string">false</value>
+                                </argument>
+                                <argument id="beforeWait">
+                                  <value class="uiWait" uri="default"/>
+                                </argument>
+                                <argument id="afterWait">
+                                  <value class="uiWait" uri="default"/>
+                                </argument>
+                                <argument id="interactionDescription">
+                                  <value class="value" valueClass="string">Call the selectAccountType method</value>
+                                </argument>
+                                <argument id="autoRetry"/>
+                                <argument id="param_AccountType">
+                                  <value class="variable">
+                                    <path element="AccountType"/>
+                                  </value>
+                                </argument>
+                                <argument id="value"/>
+                                <argument id="blur"/>
+                              </arguments>
+                              <generatedParameters>
+                                <apiParam group="value" name="param_AccountType" title="Account Type">
+                                  <type>
+                                    <textType/>
+                                  </type>
+                                </apiParam>
                                 <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
                                   <summary>The value to be populated.</summary>
                                   <type>
@@ -1372,20 +1905,15 @@
                               </generatedParameters>
                             </apiCall>
                             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="211" title="Set the Industry_ Code__c to {IndustryCode}">
+                              <tags>
+                                <string>disabled</string>
+                              </tags>
                               <arguments>
                                 <argument id="locator">
                                   <value class="uiLocator" uri="ui:pageobject:field?field=Industry_Code__c&amp;pageId=pageobjects.LeadCreationPage"/>
                                 </argument>
                                 <argument id="interaction">
                                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
-                                </argument>
-                                <argument id="value">
-                                  <value class="variable">
-                                    <path element="IndustryCode"/>
-                                  </value>
-                                </argument>
-                                <argument id="blur">
-                                  <value class="value" valueClass="boolean">false</value>
                                 </argument>
                                 <argument id="pressEnter">
                                   <value class="value" valueClass="boolean">false</value>
@@ -1406,8 +1934,79 @@
                                   <value class="value" valueClass="string">Set the Industry_ Code__c to {IndustryCode}</value>
                                 </argument>
                                 <argument id="autoRetry"/>
+                                <argument id="value">
+                                  <value class="variable">
+                                    <path element="IndustryCode"/>
+                                  </value>
+                                </argument>
+                                <argument id="blur"/>
                               </arguments>
                               <generatedParameters>
+                                <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
+                                  <summary>The value to be populated.</summary>
+                                  <type>
+                                    <textType>
+                                      <constraints>
+                                        <valueConstraint name="mimeType">text/plain</valueConstraint>
+                                      </constraints>
+                                    </textType>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
+                                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
+                                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                              </generatedParameters>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="226" title="Call the selectIndustryCode method">
+                              <arguments>
+                                <argument id="locator">
+                                  <value class="uiLocator" uri="ui:pageobject:method?operation=selectIndustryCode&amp;pageId=pageobjects.LeadCreationPage"/>
+                                </argument>
+                                <argument id="interaction">
+                                  <value class="uiInteraction" uri="ui:interaction?name=invoke"/>
+                                </argument>
+                                <argument id="pressEnter">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="captureBefore">
+                                  <value class="value" valueClass="string">false</value>
+                                </argument>
+                                <argument id="captureAfter">
+                                  <value class="value" valueClass="string">false</value>
+                                </argument>
+                                <argument id="beforeWait">
+                                  <value class="uiWait" uri="default"/>
+                                </argument>
+                                <argument id="afterWait">
+                                  <value class="uiWait" uri="default"/>
+                                </argument>
+                                <argument id="interactionDescription">
+                                  <value class="value" valueClass="string">Call the selectIndustryCode method</value>
+                                </argument>
+                                <argument id="autoRetry"/>
+                                <argument id="param_IndustryCode">
+                                  <value class="variable">
+                                    <path element="IndustryCode"/>
+                                  </value>
+                                </argument>
+                                <argument id="value"/>
+                                <argument id="blur"/>
+                              </arguments>
+                              <generatedParameters>
+                                <apiParam group="value" name="param_IndustryCode" title="Industry Code">
+                                  <type>
+                                    <textType/>
+                                  </type>
+                                </apiParam>
                                 <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
                                   <summary>The value to be populated.</summary>
                                   <type>
@@ -1821,36 +2420,6 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.If" name="If" testItemId="142" title="If: {Result Name = &quot;drdprofile&quot;}">
-      <tags>
-        <string>disabled</string>
-      </tags>
-      <arguments>
-        <argument argId="2dd6db51-2151-4a3c-b369-1db3516c49b8" id="condition">
-          <value class="eq">
-            <lhs class="variable">
-              <path element="Result Name"/>
-            </lhs>
-            <rhs class="value" valueClass="string">drdprofile</rhs>
-          </value>
-        </argument>
-      </arguments>
-      <parameterValueSources/>
-      <clauses>
-        <clause name="then" testItemId="143">
-          <steps/>
-          <tags>
-            <string>disabled</string>
-          </tags>
-        </clause>
-        <clause name="else" testItemId="152">
-          <steps/>
-          <tags>
-            <string>disabled</string>
-          </tags>
-        </clause>
-      </clauses>
-    </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="43" title="On LeadDetailPage page">
       <arguments>
         <argument id="uiConnectionName">
@@ -2242,6 +2811,9 @@
             <path element="IndustryCode"/>
           </expected>
         </resultAssertion>
+        <resultAssertion resultName="RecordTypeId">
+          <expected class="value" valueClass="string">Mobile Account</expected>
+        </resultAssertion>
       </resultAssertions>
       <parameterValueSources/>
       <parameterGeneratorProperties>
@@ -2264,159 +2836,6 @@
         <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Industry_Code__c" name="Industry_Code__c" title="Industry Code"/>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="55" title="On ConvertedAccountPage page">
-      <arguments>
-        <argument id="uiConnectionName">
-          <value class="value" valueClass="string">drdprofile</value>
-        </argument>
-        <argument id="target">
-          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.ConvertedAccountPage"/>
-        </argument>
-        <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
-        </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On ConvertedAccountPage page</value>
-        </argument>
-        <argument id="windowSelection">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="windowSize">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="closeWindow"/>
-        <argument id="captureBefore">
-          <value class="value" valueClass="string">full</value>
-        </argument>
-        <argument id="captureAfter">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="uiTargetUrl"/>
-      </arguments>
-      <clauses>
-        <clause name="substeps" testItemId="56">
-          <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="62" title="UI Assert">
-              <tags>
-                <string>disabled</string>
-              </tags>
-              <arguments>
-                <argument id="resultName">
-                  <value class="value" valueClass="string">Values</value>
-                </argument>
-                <argument id="resultScope">
-                  <value class="value" valueClass="string">Test</value>
-                </argument>
-                <argument id="fieldAssertions">
-                  <value class="valueList" mutable="Mutable">
-                    <uiFieldAssertion resultName="AccountSource">
-                      <fieldLocator uri="ui:pageobject:field?pageId=pageobjects.ConvertedAccountPage&amp;field=AccountSource"/>
-                      <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="Contains" normalize="true">
-                          <value class="value" valueClass="string">Humanitarian</value>
-                        </uiAttributeAssertion>
-                      </attributeAssertions>
-                    </uiFieldAssertion>
-                  </value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="columnAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="pageAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="beforeWait"/>
-                <argument id="autoRetry"/>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-              </arguments>
-              <resultAssertions>
-                <resultAssertion/>
-              </resultAssertions>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="122" title="UI Assert">
-              <arguments>
-                <argument id="resultName">
-                  <value class="value" valueClass="string">Values</value>
-                </argument>
-                <argument id="resultScope">
-                  <value class="value" valueClass="string">Test</value>
-                </argument>
-                <argument id="fieldAssertions">
-                  <value class="valueList" mutable="Mutable">
-                    <uiFieldAssertion resultName="Website">
-                      <fieldLocator uri="ui:pageobject:field?field=Website&amp;pageId=pageobjects.ConvertedAccountPage"/>
-                      <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo" normalize="true">
-                          <value class="variable">
-                            <path element="Website"/>
-                          </value>
-                        </uiAttributeAssertion>
-                      </attributeAssertions>
-                    </uiFieldAssertion>
-                  </value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">true</value>
-                </argument>
-                <argument id="columnAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="pageAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="beforeWait"/>
-                <argument id="autoRetry"/>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="70" title="UI Assert">
-              <arguments>
-                <argument id="resultName">
-                  <value class="value" valueClass="string">Values</value>
-                </argument>
-                <argument id="resultScope">
-                  <value class="value" valueClass="string">Test</value>
-                </argument>
-                <argument id="fieldAssertions">
-                  <value class="valueList" mutable="Mutable">
-                    <uiFieldAssertion resultName="RecordTypeId">
-                      <fieldLocator uri="ui:pageobject:field?field=RecordTypeId&amp;pageId=pageobjects.ConvertedAccountPage"/>
-                      <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo" normalize="true">
-                          <value class="value" valueClass="string">Mobile Account</value>
-                        </uiAttributeAssertion>
-                      </attributeAssertions>
-                    </uiFieldAssertion>
-                  </value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="columnAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="pageAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="beforeWait"/>
-                <argument id="autoRetry"/>
-              </arguments>
-            </apiCall>
-          </steps>
-        </clause>
-      </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="uiTargetUrl" title="Web Page">
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-      </generatedParameters>
-    </apiCall>
   </steps>
   <params>
     <param linkedToUrl="provar:hasvalue:42b0e398-c4b0-4c94-a093-a3d2e9249f6c" name="reuseConnectionName" passwordVariableAllowed="true" title="Override Connection">
@@ -2430,10 +2849,8 @@
         </connectionType>
       </type>
     </param>
-  </params>
-  <outputParams>
     <param name="Company" passwordVariableAllowed="true" title="Company">
-      <summary>The name of the value to be set.  May contain sub-values, e.g. 'Value1.SubValue1'.</summary>
+      <summary/>
       <type>
         <textType>
           <constraints>
@@ -2442,12 +2859,9 @@
           </constraints>
         </textType>
       </type>
-      <sourceValue class="variable">
-        <path element="Company"/>
-      </sourceValue>
     </param>
-    <param name="Firstname" passwordVariableAllowed="true" title="Firstname">
-      <summary>The name of the value to be set.  May contain sub-values, e.g. 'Value1.SubValue1'.</summary>
+    <param name="FirstName" passwordVariableAllowed="true" title="FirstName">
+      <summary/>
       <type>
         <textType>
           <constraints>
@@ -2456,15 +2870,21 @@
           </constraints>
         </textType>
       </type>
-      <sourceValue class="variable">
-        <path element="Firstname"/>
-      </sourceValue>
     </param>
-  </outputParams>
+  </params>
+  <outputParams/>
   <args>
-    <argument id="reuseConnectionName">
+    <argument id="reuseConnectionName"/>
+    <argument id="Company">
       <value class="variable">
-        <path element="DRDProfile"/>
+        <path element="Data"/>
+        <path element="Company"/>
+      </value>
+    </argument>
+    <argument id="FirstName">
+      <value class="variable">
+        <path element="Data"/>
+        <path element="FirstName"/>
       </value>
     </argument>
   </args>
@@ -2476,6 +2896,28 @@
       <name class="value" valueClass="string">Firstname</name>
     </outputArgument>
   </outputArgs>
-  <parameterValueSources/>
+  <parameterValueSources>
+    <parameterValueSource variableName="Data" variableScope="Test">
+      <cacheToken>C:/Users/chilu/git/repository/BSFPilotEngagement/templates/test1.xlsx;1690346723277</cacheToken>
+      <cachedParameters>
+        <apiParam name="Company"/>
+        <apiParam name="FirstName"/>
+        <apiParam name="LastName"/>
+        <apiParam name="Street"/>
+        <apiParam name="City"/>
+        <apiParam name="PostalCode"/>
+        <apiParam name="LeadSource"/>
+        <apiParam name="PhoneType"/>
+        <apiParam name="TotalCompanySize"/>
+        <apiParam name="IndustryCode"/>
+        <apiParam name="AccountType"/>
+        <apiParam name="StateCode"/>
+      </cachedParameters>
+      <sourceValue class="excelTarget" namesLocation="FirstRowOfRange" whereComparison="EqualTo">
+        <workbookPath class="value" valueClass="string">templates/test1.xlsx</workbookPath>
+        <worksheetName class="value" valueClass="string">2203</worksheetName>
+      </sourceValue>
+    </parameterValueSource>
+  </parameterValueSources>
   <tags/>
 </testCase>

@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="9" registryId="20ec7f55-a835-449a-b105-249940b1885b" visibility="Internal">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: admin (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">admin</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">admin</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName">
+          <value class="value" valueClass="string">BSF</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument argId="562ddb14-7109-49d4-a30c-19dd653b22f5" id="reuseConnectionName">
+          <value class="variable">
+            <path element="reuseConnectionName"/>
+          </value>
+        </argument>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Reuse</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="2" title="Create Object: Lead=&gt;LeadId">
+      <arguments>
+        <argument id="objectType">
+          <value class="value" valueClass="string">Lead</value>
+        </argument>
+        <argument id="resultIdName">
+          <value class="value" valueClass="string">LeadId</value>
+        </argument>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">admin</value>
+        </argument>
+        <argument id="assignmentRuleId"/>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="Company">
+          <value class="variable">
+            <path element="Company"/>
+          </value>
+        </argument>
+        <argument id="FirstName">
+          <value class="variable">
+            <path element="FirstName"/>
+          </value>
+        </argument>
+        <argument id="LastName">
+          <value class="variable">
+            <path element="LastName"/>
+          </value>
+        </argument>
+        <argument id="Street">
+          <value class="variable">
+            <path element="Street"/>
+          </value>
+        </argument>
+        <argument id="City">
+          <value class="variable">
+            <path element="City"/>
+          </value>
+        </argument>
+        <argument id="PostalCode">
+          <value class="variable">
+            <path element="PostalCode"/>
+          </value>
+        </argument>
+        <argument id="StateCode">
+          <value class="variable">
+            <path element="StateCode"/>
+          </value>
+        </argument>
+        <argument id="Phone">
+          <value class="compound">
+            <parts>
+              <funcCall id="UniqueId">
+                <argument id="length">
+                  <value class="value" valueClass="decimal">3</value>
+                </argument>
+                <argument id="format">
+                  <value class="variable">
+                    <path element="NUMERIC"/>
+                  </value>
+                </argument>
+              </funcCall>
+              <value valueClass="string">-</value>
+              <funcCall id="UniqueId">
+                <argument id="length">
+                  <value class="value" valueClass="decimal">3</value>
+                </argument>
+                <argument id="format">
+                  <value class="variable">
+                    <path element="NUMERIC"/>
+                  </value>
+                </argument>
+              </funcCall>
+              <value valueClass="string">-</value>
+              <funcCall id="UniqueId">
+                <argument id="length">
+                  <value class="value" valueClass="decimal">4</value>
+                </argument>
+                <argument id="format">
+                  <value class="variable">
+                    <path element="NUMERIC"/>
+                  </value>
+                </argument>
+              </funcCall>
+            </parts>
+          </value>
+        </argument>
+        <argument id="Email">
+          <value class="compound">
+            <parts>
+              <funcCall id="UniqueId">
+                <argument id="length">
+                  <value class="value" valueClass="decimal">6</value>
+                </argument>
+                <argument id="format">
+                  <value class="variable">
+                    <path element="ALPHA"/>
+                  </value>
+                </argument>
+              </funcCall>
+              <value valueClass="string">@redcorss.org</value>
+            </parts>
+          </value>
+        </argument>
+        <argument id="LeadSource">
+          <value class="variable">
+            <path element="LeadSource"/>
+          </value>
+        </argument>
+        <argument id="Website">
+          <value class="compound">
+            <parts>
+              <funcCall id="UniqueId">
+                <argument id="length">
+                  <value class="value" valueClass="decimal">6</value>
+                </argument>
+                <argument id="format">
+                  <value class="variable">
+                    <path element="ALPHA"/>
+                  </value>
+                </argument>
+              </funcCall>
+              <value valueClass="string">.redcorss</value>
+            </parts>
+          </value>
+        </argument>
+        <argument id="Phone_Type__c">
+          <value class="variable">
+            <path element="PhoneType"/>
+          </value>
+        </argument>
+        <argument id="Total_Company_Size__c">
+          <value class="variable">
+            <path element="TotalCompanySize"/>
+          </value>
+        </argument>
+        <argument id="Industry_Code__c">
+          <value class="variable">
+            <path element="IndustryCode"/>
+          </value>
+        </argument>
+        <argument id="Account_Type__c">
+          <value class="variable">
+            <path element="AccountType"/>
+          </value>
+        </argument>
+      </arguments>
+      <parameterGeneratorProperties>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.ConnectionName">admin</propertyValue>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.CustomObjectName">Lead</propertyValue>
+      </parameterGeneratorProperties>
+      <generatedParameters>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=Company" name="Company" title="Company"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=FirstName" name="FirstName" title="FirstName"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=LastName" name="LastName" title="LastName"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=Street" name="Street" title="Street"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=City" name="City" title="City"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=PostalCode" name="PostalCode" title="PostalCode"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=StateCode" name="StateCode" title="StateCode"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=Phone" name="Phone" title="Phone"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=Email" name="Email" title="Email"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=LeadSource" name="LeadSource" title="LeadSource"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=Website" name="Website" title="Website"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=Phone_Type__c" name="Phone_Type__c" title="Phone_Type__c"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=Total_Company_Size__c" name="Total_Company_Size__c" title="Total_Company_Size__c"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=Industry_Code__c" name="Industry_Code__c" title="Industry_Code__c"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=Account_Type__c" name="Account_Type__c" title="Account_Type__c"/>
+      </generatedParameters>
+    </apiCall>
+  </steps>
+  <params>
+    <param name="Company" passwordVariableAllowed="true" title="Company">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param linkedToUrl="provar:hasvalue:562ddb14-7109-49d4-a30c-19dd653b22f5" name="reuseConnectionName" passwordVariableAllowed="true" title="Override Connection">
+      <summary>The name of an already opened connect to re-use.</summary>
+      <type>
+        <connectionType>
+          <constraints>
+            <valueConstraint name="variableName">true</valueConstraint>
+            <valueConstraint name="requiredCapabilities">sfSoapConnect</valueConstraint>
+          </constraints>
+        </connectionType>
+      </type>
+    </param>
+    <param name="FirstName" passwordVariableAllowed="true" title="FirstName">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param name="LastName" passwordVariableAllowed="true" title="LastName">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param name="Street" passwordVariableAllowed="true" title="Street">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param name="City" passwordVariableAllowed="true" title="City">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param name="StateCode" passwordVariableAllowed="true" title="StateCode">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param name="PostalCode" passwordVariableAllowed="true" title="PostalCode">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param name="Email" passwordVariableAllowed="true" title="Email">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param name="LeadSource" passwordVariableAllowed="true" title="LeadSource">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param name="Website" passwordVariableAllowed="true" title="Website">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param name="PhoneType" passwordVariableAllowed="true" title="PhoneType">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param name="TotalCompanySize" passwordVariableAllowed="true" title="TotalCompanySize">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param name="IndustryCode" passwordVariableAllowed="true" title="IndustryCode">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param name="AccountType" passwordVariableAllowed="true" title="AccountType">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param name="Country" passwordVariableAllowed="true" title="Country">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+  </params>
+  <outputParams>
+    <param name="LeadId" passwordVariableAllowed="true" title="LeadId">
+      <summary>The name under which the resulting Object Id will be stored.</summary>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+      <sourceValue class="variable">
+        <path element="LeadId"/>
+      </sourceValue>
+    </param>
+  </outputParams>
+  <args>
+    <argument id="Company">
+      <value class="variable">
+        <path element="Data"/>
+        <path element="Company"/>
+      </value>
+    </argument>
+    <argument id="reuseConnectionName"/>
+    <argument id="FirstName">
+      <value class="variable">
+        <path element="Data"/>
+        <path element="FirstName"/>
+      </value>
+    </argument>
+    <argument id="LastName">
+      <value class="variable">
+        <path element="Data"/>
+        <path element="LastName"/>
+      </value>
+    </argument>
+    <argument id="Street">
+      <value class="variable">
+        <path element="Data"/>
+        <path element="Street"/>
+      </value>
+    </argument>
+    <argument id="City">
+      <value class="variable">
+        <path element="Data"/>
+        <path element="City"/>
+      </value>
+    </argument>
+    <argument id="PostalCode">
+      <value class="variable">
+        <path element="Data"/>
+        <path element="PostalCode"/>
+      </value>
+    </argument>
+    <argument id="Email">
+      <value class="compound">
+        <parts>
+          <funcCall id="UniqueId">
+            <argument id="length">
+              <value class="value" valueClass="decimal">6</value>
+            </argument>
+            <argument id="format">
+              <value class="variable">
+                <path element="ALPHA"/>
+              </value>
+            </argument>
+          </funcCall>
+          <value valueClass="string">@redcorss.org</value>
+        </parts>
+      </value>
+    </argument>
+    <argument id="LeadSource">
+      <value class="compound">
+        <parts>
+          <funcCall id="UniqueId">
+            <argument id="length">
+              <value class="value" valueClass="decimal">6</value>
+            </argument>
+            <argument id="format">
+              <value class="variable">
+                <path element="ALPHA"/>
+              </value>
+            </argument>
+          </funcCall>
+          <value valueClass="string">.com</value>
+        </parts>
+      </value>
+    </argument>
+    <argument id="Website">
+      <value class="variable">
+        <path element="Data"/>
+        <path element="Website"/>
+      </value>
+    </argument>
+    <argument id="PhoneType">
+      <value class="variable">
+        <path element="Data"/>
+        <path element="PhoneType"/>
+      </value>
+    </argument>
+    <argument id="TotalCompanySize">
+      <value class="variable">
+        <path element="Data"/>
+        <path element="TotalCompanySize"/>
+      </value>
+    </argument>
+    <argument id="IndustryCode">
+      <value class="variable">
+        <path element="Data"/>
+        <path element="IndustryCode"/>
+      </value>
+    </argument>
+    <argument id="AccountType">
+      <value class="variable">
+        <path element="Data"/>
+        <path element="AccountType"/>
+      </value>
+    </argument>
+    <argument id="Country">
+      <value class="variable">
+        <path element="Data"/>
+        <path element="Country"/>
+      </value>
+    </argument>
+    <argument id="StateCode">
+      <value class="variable">
+        <path element="Data"/>
+        <path element="StateCode"/>
+      </value>
+    </argument>
+  </args>
+  <outputArgs>
+    <outputArgument id="LeadId">
+      <name class="value" valueClass="string">LeadId</name>
+    </outputArgument>
+  </outputArgs>
+  <parameterValueSources/>
+</testCase>

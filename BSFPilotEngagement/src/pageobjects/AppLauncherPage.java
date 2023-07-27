@@ -23,6 +23,10 @@ public class AppLauncherPage {
 	@LinkType()
 	@FindBy(xpath = "//div[contains(@class, 'active') and contains(@class, 'open') and (contains(@class, 'forceModal') or contains(@class, 'uiModal'))][last()]//a[normalize-space(.)='Scheduling Console']")
 	public WebElement schedulingConsole;
+	
+	@LinkType()
+	@FindBy(xpath = "//*[contains(text(),'Resource Calendar')]/ancestor::a")
+	public WebElement ResourceCalender;
 	@ButtonType()
 	@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//button[normalize-space(.)='Manage Territories']")
 	public WebElement FilterCollectionOperationsIcon;
