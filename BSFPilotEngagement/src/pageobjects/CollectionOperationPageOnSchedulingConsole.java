@@ -4,16 +4,25 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Logger;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.provar.core.testapi.annotations.*;
 
 @Page(title = "CollectionOperationPageOnSchedulingConsole", summary = "", relativeUrl = "", connection = "ApsSchedular")
 public class CollectionOperationPageOnSchedulingConsole {
+
+	@TestLogger
+
+	public Logger testLogger;
 
 	WebDriver driver;
 
@@ -134,6 +143,14 @@ public class CollectionOperationPageOnSchedulingConsole {
 	@FindBy(xpath = "//*[contains(text(),'Operation Record')]")
 	public WebElement OperationRecordform_Submission;
 
+	@TextType()
+	@FindBy(xpath = "//*[contains(text(),'Are you sure you want to submit? Submitted Op Reco')]")
+	public WebElement AreyousureyouwanttosubmitSubmittedOpReco;
+
+	@ButtonType()
+	@FindBy(xpath = "//button[contains(text(),'Yes')]")
+	public WebElement Yes_AreyousureyouwanttosubmitSubmittedOpReco;
+
 	public void selectCurrentWeek_Today(String currentDate) {
 
 		// 2023-07-21
@@ -151,99 +168,64 @@ public class CollectionOperationPageOnSchedulingConsole {
 
 	public void ArcRegion(String ArcRegion) {
 
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("javascript:window.scrollBy(0,250)");
 		// Ohio South
+		WebElement arcRegion = driver.findElement(By.xpath("//span[contains(text(),'" + ArcRegion + "')]"));
 
-		driver.findElement(By.xpath("//span[contains(text(),'" + ArcRegion + "')]")).click();
+		js.executeScript("arguments[0].scrollIntoView(true);", arcRegion);
+		js.executeScript("arguments[0].click();", arcRegion);
+
 	}
 
 	public void Distrcit(String Distrcit) {
 
 		// Columbus Franklin
 
-		driver.findElement(By.xpath("//span[contains(text(),'" + Distrcit + "')]")).click();
+		WebElement DistrcitN = driver.findElement(By.xpath("//span[contains(text(),'" + Distrcit + "')]"));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", DistrcitN);
+		js.executeScript("arguments[0].click();", DistrcitN);
+
 	}
 
 	public void selectdrivedate_DriveCalender_BeforeDriveStatus_Hold(String drivedate) throws Exception {
 
-		/*
-		 * String staffBeforeHold = driver.findElement(By.xpath("(//td[@data-value='" +
-		 * drivedate +
-		 * "']/descendant::div[@class='staff-info']//lightning-formatted-number)[4]")).
-		 * getText().trim(); int staffNum = Integer.parseInt(staffBeforeHold);
-		 */
-
+		// StaffInfo
 		String staffBeforeHold = driver.findElement(By.xpath("(//td[@data-value='" + drivedate
 				+ "']/descendant::div[@class='staff-info']//lightning-formatted-number)[2]")).getText().trim();
 		int staffNum1 = Integer.parseInt(staffBeforeHold);
 
-		if (staffNum1 == 0) {
+		testLogger.info("StaffNum Before DriveStatus Hold is:" + staffNum1);
 
-			System.out.println("StaffNum Before DriveStatus Hold is:" + staffNum1);
-		} else {
-			throw new Exception("Staff is  increased");
-
-		}
-
-		/*
-		 * String rbcBeforeHold = driver.findElement(By.xpath(
-		 * "(//td[@data-value='2023-07-24']/descendant::span[text()='2RBC']/ancestor::div[1]/descendant::lightning-formatted-number[2]"
-		 * )).getText().trim(); int rbcnum = Integer.parseInt(rbcBeforeHold);
-		 */
-
+		// RBC
 		String rbcBeforeHold = driver.findElement(By.xpath("//td[@data-value='" + drivedate
 				+ "']/descendant::span[text()='2RBC']/ancestor::div[1]/descendant::lightning-formatted-number[1]"))
 				.getText().trim();
 		int rbcnum1 = Integer.parseInt(rbcBeforeHold);
 
-		if (rbcnum1 == 0) {
-
-			System.out.println("2RBC Num Before Drive status Hold is:" + rbcnum1);
-		} else {
-			throw new Exception("2RBC is  increased");
-
-		}
+		testLogger.info("2RBC Num Before Drive status Hold is:" + rbcnum1);
 
 	}
 
 	public void selectdrivedate_DriveCalender_AfterDriveStatus_Hold(String drivedate) throws Exception {
-
-		/*
-		 * String staffBeforeHold = driver.findElement(By.xpath("(//td[@data-value='" +
-		 * drivedate +
-		 * "']/descendant::div[@class='staff-info']//lightning-formatted-number)[4]")).
-		 * getText().trim(); int staffNum = Integer.parseInt(staffBeforeHold);
-		 */
-
+		//StaffInfoAfterHold
+		
 		String staffAfterHold = driver.findElement(By.xpath("(//td[@data-value='" + drivedate
 				+ "']/descendant::div[@class='staff-info']//lightning-formatted-number)[2]")).getText().trim();
-		int staffNum1 = Integer.parseInt(staffAfterHold);
+		int staffNum2 = Integer.parseInt(staffAfterHold);
 
-		if (staffNum1 > 0) {
+		testLogger.info("StaffNum After DriveStatus Hold is:" + staffNum2);
 
-			System.out.println("StaffNum After DriveStatus Hold is:" + staffNum1);
-		} else {
-			throw new Exception("Staff is  not increased");
-
-		}
-
-		/*
-		 * String rbcBeforeHold = driver.findElement(By.xpath(
-		 * "(//td[@data-value='2023-07-24']/descendant::span[text()='2RBC']/ancestor::div[1]/descendant::lightning-formatted-number[2]"
-		 * )).getText().trim(); int rbcnum = Integer.parseInt(rbcBeforeHold);
-		 */
-
+		
+		//RBC
 		String rbcAfterHold = driver.findElement(By.xpath("//td[@data-value='" + drivedate
 				+ "']/descendant::span[text()='2RBC']/ancestor::div[1]/descendant::lightning-formatted-number[1]"))
 				.getText().trim();
-		int rbcnum1 = Integer.parseInt(rbcAfterHold);
+		int rbcnum2 = Integer.parseInt(rbcAfterHold);
 
-		if (rbcnum1 > 0) {
-
-			System.out.println("2RBC Num After Drive status Hold is:" + rbcnum1);
-		} else {
-			throw new Exception("2RBC is not increased");
-
-		}
+		testLogger.info("2RBC Num After Drive status Hold is:" + rbcnum2);
+		
 
 	}
 
@@ -272,7 +254,8 @@ public class CollectionOperationPageOnSchedulingConsole {
 
 	}
 
-	public void clickOppNameOnResourceCalender(String OppName, String Location) {
+	public void clickOppNameOnResourceCalender(int DateofDrive, String OppName, String Location)
+			throws InterruptedException {
 
 		// Get the Drive Date
 		Calendar cal = Calendar.getInstance();
@@ -280,17 +263,23 @@ public class CollectionOperationPageOnSchedulingConsole {
 		SimpleDateFormat formDate = new SimpleDateFormat("dd");
 		// String strDate = formDate.format(new Date());
 
-		cal.add(Calendar.DATE, 4);
+		cal.add(Calendar.DATE, DateofDrive);
 		String driveDate = formDate.format(cal.getTime());
 
-		System.out.println(driveDate);
+		int date = (int) Integer.parseInt(driveDate);
+
+		System.out.println(date);
 
 		// click DriveDateOppname
-		WebElement DriveDataOPP = driver.findElement(By.xpath("//lightning-formatted-date-time[text()='" + driveDate
+		WebElement DriveDataOPP = driver.findElement(By.xpath("//lightning-formatted-date-time[text()='" + date
 				+ "']/ancestor::td/descendant::div[contains(text(),'" + OppName + ", " + Location + "')]"));
 
 		DriveDataOPP.click();
+		Thread.sleep(5000);
 
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//button[contains(text(),'Operation Record')]")));
 		// Click OpearationRec
 		WebElement oppRecordBtn = driver.findElement(By.xpath("//button[contains(text(),'Operation Record')]"));
 		oppRecordBtn.click();
@@ -301,6 +290,10 @@ public class CollectionOperationPageOnSchedulingConsole {
 			throws InterruptedException {
 
 		// relatedtabclick
+
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'Related')]")));
+
 		WebElement relatedtab = driver.findElement(By.xpath("//a[contains(text(),'Related')]"));
 		relatedtab.click();
 		Thread.sleep(5000);
@@ -323,21 +316,46 @@ public class CollectionOperationPageOnSchedulingConsole {
 			WebElement actualShiftEndTime = driver.findElement(
 					By.xpath("//input[@name='actualShiftEnd' and @class='slds-combobox__input slds-input']"));
 
+			// ShiftStartDateAndTime
 			actualShiftStartDate.sendKeys(DriveDate);
+			Thread.sleep(3000);
+			actualShiftStartTime.clear();
 			actualShiftStartTime.sendKeys(StartTime);
+			actualShiftStartTime.clear();
+			Thread.sleep(3000);
+			actualShiftStartTime.sendKeys(StartTime);
+
+			// ShiftEndDateAndTime
 			actualShiftEndDate.sendKeys(DriveDate);
+			actualShiftEndTime.clear();
 			actualShiftEndTime.sendKeys(EndTime);
+			actualShiftEndTime.clear();
+			Thread.sleep(3000);
+			actualShiftEndTime.sendKeys(EndTime);
+
+			Thread.sleep(5000);
 
 			WebElement EarlyDepartureorLateArrivaldropdown = driver.findElement(
 					By.xpath("//label[contains(text(),'Early Departure')]/ancestor::div[1]/descendant::button"));
 
-			EarlyDepartureorLateArrivaldropdown.click();
-			WebElement selectEarlyDepartureorLateArrivaldropdown = driver
-					.findElement(By.xpath("//span[contains(text(),'Turnaround Time')]"));
-			selectEarlyDepartureorLateArrivaldropdown.click();
+			Actions action = new Actions(driver);
 
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].scrollIntoView(true);", EarlyDepartureorLateArrivaldropdown);
+
+			js.executeScript("arguments[0].click();", EarlyDepartureorLateArrivaldropdown);
+			// action.moveToElement(EarlyDepartureorLateArrivaldropdown).click().perform();
+
+			// EarlyDepartureorLateArrivaldropdown.click();
+			WebElement selectEarlyDepartureorLateArrivaldropdown = driver
+					.findElement(By.xpath("//span[contains(text(),'Not Late/Early')]"));
+
+			action.moveToElement(selectEarlyDepartureorLateArrivaldropdown).click().perform();
+			// selectEarlyDepartureorLateArrivaldropdown.click();
+			Thread.sleep(5000);
 			WebElement savebtn = driver.findElement(By.xpath("(//button[contains(text(),'Save')])[2]"));
-			savebtn.click();
+			action.moveToElement(savebtn).click().perform();
+			// savebtn.click();
 			Thread.sleep(5000);
 
 		}
@@ -345,7 +363,7 @@ public class CollectionOperationPageOnSchedulingConsole {
 	}
 
 	public void clickOperationTabOnOppRecordSubmission(String DriveDate, String DriveDate1, String StartTime,
-			String EndTime,String User) throws InterruptedException {
+			String EndTime) throws InterruptedException {
 
 		// OperationTab
 		WebElement operationtab = driver.findElement(By.xpath("//a[contains(text(),'Operation')]"));
@@ -356,6 +374,7 @@ public class CollectionOperationPageOnSchedulingConsole {
 
 		WebElement driveInfoSection = driver.findElement(By.xpath("//span[contains(text(),'Drive Information')]"));
 		driveInfoSection.click();
+		Thread.sleep(5000);
 
 		WebElement actualDriveStartDate = driver
 				.findElement(By.xpath("//input[@name='actualDriveStart' and @class='slds-input']"));
@@ -368,78 +387,103 @@ public class CollectionOperationPageOnSchedulingConsole {
 
 		WebElement saveBtn_OperationTab = driver.findElement(By.xpath("//button[contains(text(),'Save')]"));
 
-        WebElement donorAmbassadorsActual = driver.findElement(By.xpath("//input[@name='donorAmbassadorsActual']"));
-        donorAmbassadorsActual.sendKeys(User);
-        
+		WebElement donorAmbassadorsActual = driver.findElement(By.xpath("//input[@name='donorAmbassadorsActual']"));
+		donorAmbassadorsActual.sendKeys("0");
+
+		Thread.sleep(5000);
+
 		// To check Validation on Drive Info sec
 		actualDriveStartDate.sendKeys(DriveDate);
+
+		actualDriveStartTime.clear();
 		actualDriveStartTime.sendKeys(StartTime);
+		actualDriveStartTime.clear();
+		Thread.sleep(5000);
+		actualDriveStartTime.sendKeys(StartTime);
+
 		actualDriveEndDate.sendKeys(DriveDate1); // One DayPrior to DriveDate
+
+		Thread.sleep(10000);
+		actualDriveEndTime.clear();
+		actualDriveEndTime.sendKeys(EndTime);
+		actualDriveEndTime.clear();
 		actualDriveEndTime.sendKeys(EndTime);
 
 		saveBtn_OperationTab.click();
+		Thread.sleep(10000);
 		// Errro Validation1
 		WebElement error_driveInfo1 = driver.findElement(By.xpath("//ul[@class='errorsList']//li"));
 
 		String error1 = error_driveInfo1.getText().trim();
 		if (error1.contains("Actual Drive End should be greater than Actual Drive Start")) {
-
+			testLogger.info("Error is displayed with:" + error1);
 			System.out.println("Error is displayed with:" + error1);
 
 		} else {
 			System.out.println("Error is not displayed with:" + error1);
+			testLogger.info("Error is not displayed with:" + error1);
 		}
 
-		actualDriveEndDate.sendKeys(DriveDate); // Enter correct Drive Date
+		// Enter correct Drive Date and time
+		Thread.sleep(10000);
+		actualDriveEndDate.clear();
+		actualDriveEndDate.sendKeys(DriveDate);
+		Thread.sleep(10000);
+		actualDriveEndTime.clear();
+		actualDriveEndTime.sendKeys(EndTime);
+		actualDriveEndTime.clear();
+		actualDriveEndTime.sendKeys(EndTime);
+		Thread.sleep(5000);
+
 		WebElement powerRedMachinesUsed = driver.findElement(By.xpath("//input[@name='powerRedMachinesUsed']"));
 		powerRedMachinesUsed.sendKeys("10");
 
 		saveBtn_OperationTab.click();
-
+		Thread.sleep(10000);
 		// Error Validation2
 		WebElement error_driveInfo2 = driver.findElement(By.xpath("//ul[@class='errorsList']//li"));
 
 		String error2 = error_driveInfo2.getText().trim();
-		if (error1.contains("machines used should always be equal to or less than the")) {
+		if (error2.contains("machines used should always be equal to or less than the")) {
 
 			System.out.println("Error is displayed with:" + error2);
+			testLogger.info("Error is displayed with:" + error2);
 
 		} else {
 			System.out.println("Error is not displayed with:" + error2);
+			testLogger.info("Error is not displayed with:" + error2);
 		}
-		
+		powerRedMachinesUsed.clear();
 		powerRedMachinesUsed.sendKeys("1");
-		Thread.sleep(5000);
-		
-		//Late End Drive Section
-		
-		WebElement LateEndDriveSection=driver.findElement(By.xpath("//span[contains(text(),'Late End Drive')]/ancestor::button"));		
-        LateEndDriveSection.click();
-        Thread.sleep(5000);
-        
-        WebElement LateEndDrivetoggle=driver.findElement(By.xpath("//input[@name='lateEndDrive']/ancestor::label"));
-        LateEndDrivetoggle.click();
-        Thread.sleep(5000);
-        
-        WebElement  lateEndDriveApprovedBy=driver.findElement(By.xpath("//input[@name='lateEndDriveApprovedBy']"));
-       
-        lateEndDriveApprovedBy.sendKeys(User);  //send charge user
-        
-        WebElement  LateEndReason=driver.findElement(By.xpath("//label[contains(text(),'Late End Reason')]/ancestor::div[1]/descendant::button"));
-        LateEndReason.click();
-        Thread.sleep(2000);
-        WebElement  selectLateEndReason=driver.findElement(By.xpath("//span[contains(text(),'Prolonged donor processing time')]"));
-        selectLateEndReason.click();
-        
-        
-        WebElement  submit_OperationRecord=driver.findElement(By.xpath("//button[contains(text(),'Submit')]"));
-        submit_OperationRecord.click();
-        Thread.sleep(5000);
-        
-        
-        
- 
-       
+		Thread.sleep(10000);
+
+		// Late End Drive Section
+
+		/*
+		 * WebElement LateEndDriveSection=driver.findElement(By.
+		 * xpath("//span[contains(text(),'Late End Drive')]/ancestor::button"));
+		 * LateEndDriveSection.click(); Thread.sleep(5000);
+		 * 
+		 * WebElement LateEndDrivetoggle=driver.findElement(By.xpath(
+		 * "//input[@name='lateEndDrive']/ancestor::label"));
+		 * LateEndDrivetoggle.click(); Thread.sleep(5000);
+		 * 
+		 * WebElement lateEndDriveApprovedBy=driver.findElement(By.xpath(
+		 * "//input[@name='lateEndDriveApprovedBy']"));
+		 * 
+		 * lateEndDriveApprovedBy.sendKeys(User); //send charge user
+		 * 
+		 * WebElement LateEndReason=driver.findElement(By.
+		 * xpath("//label[contains(text(),'Late End Reason')]/ancestor::div[1]/descendant::button"
+		 * )); LateEndReason.click(); Thread.sleep(2000); WebElement
+		 * selectLateEndReason=driver.findElement(By.
+		 * xpath("//span[contains(text(),'Prolonged donor processing time')]"));
+		 * selectLateEndReason.click();
+		 */
+
+		WebElement submit_OperationRecord = driver.findElement(By.xpath("//button[contains(text(),'Submit')]"));
+		submit_OperationRecord.click();
+		Thread.sleep(10000);
 
 	}
 

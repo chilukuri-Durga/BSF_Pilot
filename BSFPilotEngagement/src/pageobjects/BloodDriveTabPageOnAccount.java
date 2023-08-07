@@ -95,6 +95,21 @@ public class BloodDriveTabPageOnAccount {
 	@ButtonType()
 	@FindBy(xpath = "//button[contains(text(),'Yes')]")
 	public WebElement yes_Areyousureyouwanttosaveanddispatch;
+	
+	@ButtonType()
+	@FindBy(xpath = "//button[contains(text(),'Save & Dispatch')]")
+	public WebElement SaveDispatchbtn;
+	
+	
+	
+	
+	
+	public void clickOppNameOnAcc(String Company){
+	
+	WebElement OppName=driver.findElement(By.xpath("//a[contains(text(),'"+Company+", TBD')]"));
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	js.executeScript("arguments[0].click();", OppName);
+	}
 
 
 	public void clickOppName() {

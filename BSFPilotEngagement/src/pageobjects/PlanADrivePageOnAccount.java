@@ -88,6 +88,10 @@ public class PlanADrivePageOnAccount {
 	public WebElement targetAskDate;
 	
 	@TextType()
+	@FindBy(xpath = "//input[@name='Targeted_Ask_Date_Only']")
+	public WebElement targetAskDateOnly;
+	
+	@TextType()
 	@FindBy(xpath = "//input[@name='Close_Date']")
 	public WebElement closedDate;
 

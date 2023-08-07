@@ -512,7 +512,7 @@
         </argument>
       </arguments>
     </apiCall>
-    <caseCall testCaseId="db1a8ec1-fa15-46ad-965e-b53c2a83d614" testCasePath="tests/DeleteLead.teardown" testItemId="228">
+    <caseCall testCaseId="db1a8ec1-fa15-46ad-965e-b53c2a83d614" testCasePath="tests/CallableTestCases/DeleteLead.teardown" testItemId="228">
       <arguments>
         <argument id="reuseConnectionName">
           <value class="value" valueClass="string">drdprofile</value>
@@ -531,7 +531,7 @@
         </argument>
       </arguments>
     </caseCall>
-    <caseCall testCaseId="814e09c8-1688-4a10-8ce4-2741d56a4305" testCasePath="tests/DeleteSkedDrive.teardown" testItemId="229">
+    <caseCall testCaseId="814e09c8-1688-4a10-8ce4-2741d56a4305" testCasePath="tests/CallableTestCases/DeleteSkedDrive.teardown" testItemId="229">
       <tags/>
       <arguments>
         <argument id="reuseConnectionName">
@@ -545,7 +545,7 @@
         </argument>
       </arguments>
     </caseCall>
-    <caseCall testCaseId="2d34f253-0a25-487b-b468-5a9a80b56ece" testCasePath="tests/DeleteOpp.teardown" testItemId="230">
+    <caseCall testCaseId="2d34f253-0a25-487b-b468-5a9a80b56ece" testCasePath="tests/CallableTestCases/DeleteOpp.teardown" testItemId="230">
       <tags/>
       <arguments>
         <argument id="reuseConnectionName">
@@ -559,7 +559,7 @@
         </argument>
       </arguments>
     </caseCall>
-    <caseCall testCaseId="b9ccf59c-1316-47f7-839e-8e440faded3f" testCasePath="tests/DeleteContact.teardown" testItemId="231">
+    <caseCall testCaseId="b9ccf59c-1316-47f7-839e-8e440faded3f" testCasePath="tests/CallableTestCases/DeleteContact.teardown" testItemId="231">
       <tags/>
       <arguments>
         <argument id="reuseConnectionName">
@@ -573,7 +573,7 @@
         </argument>
       </arguments>
     </caseCall>
-    <caseCall testCaseId="a4d25a1d-4c5e-406c-a14e-62459246785c" testCasePath="tests/DeleteAccount.teardown" testItemId="232">
+    <caseCall testCaseId="a4d25a1d-4c5e-406c-a14e-62459246785c" testCasePath="tests/CallableTestCases/DeleteAccount.teardown" testItemId="232">
       <tags/>
       <arguments>
         <argument id="reuseConnectionName">
@@ -587,7 +587,7 @@
         </argument>
       </arguments>
     </caseCall>
-    <caseCall testCaseId="20ec7f55-a835-449a-b105-249940b1885b" testCasePath="tests/LeadGenerationAPI.testcase" testItemId="227">
+    <caseCall testCaseId="20ec7f55-a835-449a-b105-249940b1885b" testCasePath="tests/CallableTestCases/LeadGenerationAPI.testcase" testItemId="227">
       <arguments>
         <argument id="Company">
           <value class="variable">

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="19" registryId="917e1b2b-c2a2-4619-8a71-b00fc8fce10c" visibility="Internal">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: admin (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">admin</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">admin</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName">
+          <value class="value" valueClass="string">BSF</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Reopen</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="1337" title="SOQL Query: select Id,Name from sked__Resource__c where Name ='{resourceName}'=&gt;skedResourceRows">
+      <arguments>
+        <argument id="soqlQuery">
+          <value class="compound">
+            <parts>
+              <value valueClass="string">select Id,Name from sked__Resource__c where Name ='</value>
+              <variable>
+                <path element="resourceName"/>
+              </variable>
+              <value valueClass="string">'</value>
+            </parts>
+          </value>
+        </argument>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">admin</value>
+        </argument>
+        <argument id="resultListName">
+          <value class="value" valueClass="string">skedResourceRows</value>
+        </argument>
+        <argument id="soqlColumnAliases">
+          <value class="valueList" mutable="Mutable"/>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="1338" title="SOQL Query: select Id, sked__Account__c, sked__Type__c, sked_Start_Time__c, sked__Finish__c, sked__Duration__c from sked__Job__c where sked__Account__c = '{account}' and sked__Type__c = '{JobType}'=&gt;skedJobRows">
+      <arguments>
+        <argument id="soqlQuery">
+          <value class="compound">
+            <parts>
+              <value valueClass="string">select Id, sked__Account__c, sked__Type__c, sked_Start_Time__c, sked__Finish__c, sked__Duration__c from sked__Job__c where sked__Account__c = '</value>
+              <variable>
+                <path element="account"/>
+              </variable>
+              <value valueClass="string">' and sked__Type__c = '</value>
+              <variable>
+                <path element="JobType"/>
+              </variable>
+              <value valueClass="string">'</value>
+            </parts>
+          </value>
+        </argument>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">admin</value>
+        </argument>
+        <argument id="resultListName">
+          <value class="value" valueClass="string">skedJobRows</value>
+        </argument>
+        <argument id="soqlColumnAliases">
+          <value class="valueList" mutable="Mutable"/>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="1341" title="Set Values: EndTime">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">EndTime</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="DateParse">
+                  <argument id="date">
+                    <value class="variable">
+                      <path element="skedJobRows"/>
+                      <path element="sked__Finish__c"/>
+                    </value>
+                  </argument>
+                  <argument id="inputFormat">
+                    <value class="value" valueClass="string">yyyy-MM-dd'T'HH:mm:ss.SSS'Z'</value>
+                  </argument>
+                  <argument id="outputFormat">
+                    <value class="value" valueClass="string">HH:mm:ss.SSS'Z'</value>
+                  </argument>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="1339" title="Create Object: sked__Job_Allocation__c=&gt;JobAllocationId">
+      <arguments>
+        <argument id="objectType">
+          <value class="value" valueClass="string">sked__Job_Allocation__c</value>
+        </argument>
+        <argument id="resultIdName">
+          <value class="value" valueClass="string">JobAllocationId</value>
+        </argument>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">admin</value>
+        </argument>
+        <argument id="assignmentRuleId"/>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="sked__Resource__c">
+          <value class="variable">
+            <path element="skedResourceRows"/>
+            <path element="Id"/>
+          </value>
+        </argument>
+        <argument id="sked__Job__c">
+          <value class="variable">
+            <path element="skedJobRows"/>
+            <path element="Id"/>
+          </value>
+        </argument>
+        <argument id="sked_Start_Time__c">
+          <value class="variable">
+            <path element="skedJobRows"/>
+            <path element="sked_Start_Time__c"/>
+          </value>
+        </argument>
+        <argument id="sked_Set_End_Time__c">
+          <value class="variable">
+            <path element="EndTime"/>
+          </value>
+        </argument>
+        <argument id="sked__Duration__c">
+          <value class="variable">
+            <path element="skedJobRows"/>
+            <path element="sked__Duration__c"/>
+          </value>
+        </argument>
+      </arguments>
+      <parameterGeneratorProperties>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.ConnectionName">admin</propertyValue>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.CustomObjectName">sked__Job_Allocation__c</propertyValue>
+      </parameterGeneratorProperties>
+      <generatedParameters>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=sked__Job_Allocation__c&amp;field=sked__Resource__c" name="sked__Resource__c" title="sked__Resource__c"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=sked__Job_Allocation__c&amp;field=sked__Job__c" name="sked__Job__c" title="sked__Job__c"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=sked__Job_Allocation__c&amp;field=sked_Start_Time__c" name="sked_Start_Time__c" title="sked_Start_Time__c"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=sked__Job_Allocation__c&amp;field=sked_Set_End_Time__c" name="sked_Set_End_Time__c" title="sked_Set_End_Time__c"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=sked__Job_Allocation__c&amp;field=sked__Duration__c" name="sked__Duration__c" title="sked__Duration__c"/>
+      </generatedParameters>
+    </apiCall>
+  </steps>
+  <params>
+    <param name="resourceName" passwordVariableAllowed="true" title="ResourceName">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param name="account" passwordVariableAllowed="true" title="Account">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param name="JobType" passwordVariableAllowed="true" title="JobType">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+  </params>
+  <args>
+    <argument id="resourceName"/>
+    <argument id="account"/>
+    <argument id="JobType"/>
+  </args>
+  <tags/>
+</testCase>

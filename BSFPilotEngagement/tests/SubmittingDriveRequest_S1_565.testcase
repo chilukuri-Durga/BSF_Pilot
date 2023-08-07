@@ -63,6 +63,50 @@
         </argument>
       </arguments>
     </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="931" title="Set Values: Location1">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">Location1</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="variable">
+                  <path element="Data"/>
+                  <path element="Location1"/>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="922" title="Set Values: User">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">User</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="variable">
+                  <path element="Data"/>
+                  <path element="User"/>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="484" title="Set Values: StartTime">
       <arguments>
         <argument id="values">
@@ -119,42 +163,7 @@
                         </value>
                       </argument>
                       <argument id="amount">
-                        <value class="value" valueClass="decimal">171</value>
-                      </argument>
-                    </value>
-                  </argument>
-                  <argument id="outputFormat">
-                    <value class="value" valueClass="string">MMM d, YYYY</value>
-                  </argument>
-                </value>
-              </namedValue>
-              <namedValue name="valueScope">
-                <value class="value" valueClass="string">Test</value>
-              </namedValue>
-            </namedValues>
-          </value>
-        </argument>
-      </arguments>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="487" title="Set Values: DriveDate1">
-      <arguments>
-        <argument id="values">
-          <value class="valueList" mutable="Mutable">
-            <namedValues mutable="Mutable">
-              <namedValue name="valuePath">
-                <value class="value" valueClass="string">DriveDate1</value>
-              </namedValue>
-              <namedValue name="value">
-                <value class="funcCall" id="DateFormat">
-                  <argument id="date">
-                    <value class="funcCall" id="DateAdd">
-                      <argument id="date">
-                        <value class="variable">
-                          <path element="TODAY"/>
-                        </value>
-                      </argument>
-                      <argument id="amount">
-                        <value class="value" valueClass="decimal">40</value>
+                        <value class="value" valueClass="decimal">175</value>
                       </argument>
                     </value>
                   </argument>
@@ -190,41 +199,6 @@
                       </argument>
                       <argument id="amount">
                         <value class="value" valueClass="decimal">70</value>
-                      </argument>
-                    </value>
-                  </argument>
-                  <argument id="outputFormat">
-                    <value class="value" valueClass="string">MMM d, YYYY</value>
-                  </argument>
-                </value>
-              </namedValue>
-              <namedValue name="valueScope">
-                <value class="value" valueClass="string">Test</value>
-              </namedValue>
-            </namedValues>
-          </value>
-        </argument>
-      </arguments>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="488" title="Set Values: TargetAskDate1">
-      <arguments>
-        <argument id="values">
-          <value class="valueList" mutable="Mutable">
-            <namedValues mutable="Mutable">
-              <namedValue name="valuePath">
-                <value class="value" valueClass="string">TargetAskDate1</value>
-              </namedValue>
-              <namedValue name="value">
-                <value class="funcCall" id="DateFormat">
-                  <argument id="date">
-                    <value class="funcCall" id="DateAdd">
-                      <argument id="date">
-                        <value class="variable">
-                          <path element="TODAY"/>
-                        </value>
-                      </argument>
-                      <argument id="amount">
-                        <value class="value" valueClass="decimal">31</value>
                       </argument>
                     </value>
                   </argument>
@@ -323,7 +297,7 @@
         </argument>
       </arguments>
     </apiCall>
-    <caseCall testCaseId="db1a8ec1-fa15-46ad-965e-b53c2a83d614" testCasePath="tests/DeleteLead.teardown" testItemId="673">
+    <caseCall testCaseId="db1a8ec1-fa15-46ad-965e-b53c2a83d614" testCasePath="tests/CallableTestCases/DeleteLead.teardown" testItemId="673">
       <arguments>
         <argument id="reuseConnectionName">
           <value class="value" valueClass="string">admin</value>
@@ -342,7 +316,7 @@
         </argument>
       </arguments>
     </caseCall>
-    <caseCall testCaseId="814e09c8-1688-4a10-8ce4-2741d56a4305" testCasePath="tests/DeleteSkedDrive.teardown" testItemId="674">
+    <caseCall testCaseId="814e09c8-1688-4a10-8ce4-2741d56a4305" testCasePath="tests/CallableTestCases/DeleteSkedDrive.teardown" testItemId="674">
       <tags/>
       <arguments>
         <argument id="reuseConnectionName">
@@ -356,7 +330,7 @@
         </argument>
       </arguments>
     </caseCall>
-    <caseCall testCaseId="2d34f253-0a25-487b-b468-5a9a80b56ece" testCasePath="tests/DeleteOpp.teardown" testItemId="675">
+    <caseCall testCaseId="2d34f253-0a25-487b-b468-5a9a80b56ece" testCasePath="tests/CallableTestCases/DeleteOpp.teardown" testItemId="675">
       <tags/>
       <arguments>
         <argument id="reuseConnectionName">
@@ -370,7 +344,7 @@
         </argument>
       </arguments>
     </caseCall>
-    <caseCall testCaseId="b9ccf59c-1316-47f7-839e-8e440faded3f" testCasePath="tests/DeleteContact.teardown" testItemId="676">
+    <caseCall testCaseId="b9ccf59c-1316-47f7-839e-8e440faded3f" testCasePath="tests/CallableTestCases/DeleteContact.teardown" testItemId="676">
       <tags/>
       <arguments>
         <argument id="reuseConnectionName">
@@ -384,7 +358,7 @@
         </argument>
       </arguments>
     </caseCall>
-    <caseCall testCaseId="a4d25a1d-4c5e-406c-a14e-62459246785c" testCasePath="tests/DeleteAccount.teardown" testItemId="677">
+    <caseCall testCaseId="a4d25a1d-4c5e-406c-a14e-62459246785c" testCasePath="tests/CallableTestCases/DeleteAccount.teardown" testItemId="677">
       <tags/>
       <arguments>
         <argument id="reuseConnectionName">
@@ -398,7 +372,7 @@
         </argument>
       </arguments>
     </caseCall>
-    <caseCall testCaseId="20ec7f55-a835-449a-b105-249940b1885b" testCasePath="tests/LeadGenerationAPI.testcase" testItemId="678">
+    <caseCall testCaseId="20ec7f55-a835-449a-b105-249940b1885b" testCasePath="tests/CallableTestCases/LeadGenerationAPI.testcase" testItemId="678">
       <arguments>
         <argument argId="93db48aa-775b-4063-bc93-89122092fde7" id="Company">
           <value class="variable">
@@ -618,2663 +592,96 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="683" title="On LeadDetailPage page">
+    <caseCall testCaseId="027bca7a-94c2-4697-b79b-5d24bbde96af" testCasePath="tests/CallableTestCases/ClickConvertLead.testcase" testItemId="915">
       <arguments>
-        <argument id="uiConnectionName">
+        <argument id="reuseConnectionName">
           <value class="value" valueClass="string">drdprofile</value>
         </argument>
-        <argument id="target">
-          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.LeadDetailPage"/>
-        </argument>
-        <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
-        </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On LeadDetailPage page</value>
-        </argument>
-        <argument id="windowSelection">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="windowSize">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="closeWindow"/>
-        <argument id="captureBefore">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="captureAfter">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="uiTargetUrl"/>
       </arguments>
-      <clauses>
-        <clause name="substeps" testItemId="901">
-          <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="46" title="Click the Convert">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=Convert&amp;pageId=pageobjects.LeadDetailPage"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">true</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Convert</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="73" title="Sleep for {10} seconds">
-              <arguments>
-                <argument id="sleepSecs">
-                  <value class="value" valueClass="decimal">10</value>
-                </argument>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="47" title="Check the Do Not Create Opportunity">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=doNotCreateOpportunity&amp;pageId=pageobjects.LeadDetailPage"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=check"/>
-                </argument>
-                <argument id="pressEnter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Check the Do Not Create Opportunity</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="ieClickMethod" seq="10000" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="48" title="Click the Convert 1">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=Convert1&amp;pageId=pageobjects.LeadDetailPage"/>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">true</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Convert 1</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-          </steps>
-        </clause>
-      </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="uiTargetUrl" title="Web Page">
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-      </generatedParameters>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="687" title="On LeadConversionPage_AccCont page">
+    </caseCall>
+    <caseCall testCaseId="ed60c3f6-8870-4769-8faa-f1462d20e15f" testCasePath="tests/CallableTestCases/ClickConvertedAccountNameFromLead.testcase" testItemId="916">
       <arguments>
-        <argument id="uiConnectionName">
+        <argument id="reuseConnectionName">
           <value class="value" valueClass="string">drdprofile</value>
         </argument>
-        <argument id="target">
-          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.LeadConversionPage_AccCont"/>
-        </argument>
-        <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
-        </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On LeadConversionPage_AccCont page</value>
-        </argument>
-        <argument id="windowSelection">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="windowSize">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="closeWindow"/>
-        <argument id="captureBefore">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="captureAfter">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="uiTargetUrl"/>
       </arguments>
-      <clauses>
-        <clause name="substeps" testItemId="53">
-          <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="688" title="Click the Converted Account Name">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=ConvertedAccountName&amp;pageId=pageobjects.LeadConversionPage_AccCont"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">full</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Converted Account Name</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="221" title="Sleep for {10} seconds">
-              <arguments>
-                <argument id="sleepSecs">
-                  <value class="value" valueClass="decimal">10</value>
-                </argument>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="82" title="SOQL Query: select Id from Account where Name = '{Company}'=&gt;AccountRows">
-              <tags>
-                <string>disabled</string>
-              </tags>
-              <arguments>
-                <argument id="soqlQuery">
-                  <value class="compound">
-                    <parts>
-                      <value valueClass="string">select Id from Account where Name = '</value>
-                      <variable>
-                        <path element="Company"/>
-                      </variable>
-                      <value valueClass="string">'</value>
-                    </parts>
-                  </value>
-                </argument>
-                <argument id="apexConnectionName">
-                  <value class="value" valueClass="string">drdprofile</value>
-                </argument>
-                <argument id="resultListName">
-                  <value class="value" valueClass="string">AccountRows</value>
-                </argument>
-                <argument id="soqlColumnAliases">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="resultScope">
-                  <value class="value" valueClass="string">Test</value>
-                </argument>
-              </arguments>
-            </apiCall>
-          </steps>
-        </clause>
-      </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="uiTargetUrl" title="Web Page">
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-      </generatedParameters>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="2" title="On EditAccountPage page">
-      <tags/>
+    </caseCall>
+    <caseCall testCaseId="d81ef88c-7268-4e54-8e0d-0848a8d46e62" testCasePath="tests/CallableTestCases/AcceptAutomationAPI_Account.testcase" testItemId="918">
       <arguments>
-        <argument id="uiConnectionName">
+        <argument id="reuseConnectionName">
           <value class="value" valueClass="string">drdprofile</value>
         </argument>
-        <argument id="target">
-          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.EditAccountPage"/>
+        <argument id="AcceptsAutomation">
+          <value class="variable">
+            <path element="AcceptsAutomation"/>
+          </value>
         </argument>
-        <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
-        </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On EditAccountPage page</value>
-        </argument>
-        <argument id="windowSelection">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="windowSize">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="closeWindow"/>
-        <argument id="captureBefore">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="captureAfter">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="uiTargetUrl"/>
       </arguments>
-      <clauses>
-        <clause name="substeps" testItemId="115">
-          <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="123" title="Click the Edit Accept Automation">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=EditAcceptAutomation&amp;pageId=pageobjects.EditAccountPage"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Edit Accept Automation</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="124" title="Set the Accepts_ Automation 2__c to {AcceptsAutomation}">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=Accepts_Automation2__c&amp;pageId=pageobjects.EditAccountPage"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=set"/>
-                </argument>
-                <argument id="value">
-                  <value class="variable">
-                    <path element="AcceptsAutomation"/>
-                  </value>
-                </argument>
-                <argument id="blur">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="pressEnter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Accepts_ Automation 2__c to {AcceptsAutomation}</value>
-                </argument>
-                <argument id="autoRetry"/>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
-                  <summary>The value to be populated.</summary>
-                  <type>
-                    <textType>
-                      <constraints>
-                        <valueConstraint name="mimeType">text/plain</valueConstraint>
-                      </constraints>
-                    </textType>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
-                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
-                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="125" title="Click the Save Edit">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=SaveEdit&amp;pageId=pageobjects.EditAccountPage"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Save Edit</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="127" title="UI Assert">
-              <arguments>
-                <argument id="resultName">
-                  <value class="value" valueClass="string">Values</value>
-                </argument>
-                <argument id="resultScope">
-                  <value class="value" valueClass="string">Test</value>
-                </argument>
-                <argument id="fieldAssertions">
-                  <value class="valueList" mutable="Mutable">
-                    <uiFieldAssertion resultName="Accepts_Automation2__c1">
-                      <fieldLocator uri="ui:pageobject:field?field=Accepts_Automation2__c1&amp;pageId=pageobjects.EditAccountPage"/>
-                      <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo" normalize="true">
-                          <value class="variable">
-                            <path element="AcceptsAutomation"/>
-                          </value>
-                        </uiAttributeAssertion>
-                      </attributeAssertions>
-                    </uiFieldAssertion>
-                  </value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="columnAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="pageAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="beforeWait"/>
-                <argument id="autoRetry"/>
-              </arguments>
-            </apiCall>
-          </steps>
-        </clause>
-      </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="uiTargetUrl" title="Web Page">
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-      </generatedParameters>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="3" title="On AddRelatedSite page">
-      <tags/>
+    </caseCall>
+    <caseCall testCaseId="4bcc22f0-bd44-4bc7-b686-8c186bc57050" testCasePath="tests/CallableTestCases/AddRelatedSite_Account.testcase" testItemId="919">
       <arguments>
-        <argument id="uiConnectionName">
+        <argument id="reuseConnectionName">
           <value class="value" valueClass="string">drdprofile</value>
         </argument>
-        <argument id="target">
-          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.AddRelatedSite"/>
+        <argument id="Location">
+          <value class="variable">
+            <path element="Location"/>
+          </value>
         </argument>
-        <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
-        </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On AddRelatedSite page</value>
-        </argument>
-        <argument id="windowSelection">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="windowSize">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="closeWindow"/>
-        <argument id="captureBefore">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="captureAfter">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="uiTargetUrl"/>
       </arguments>
-      <clauses>
-        <clause name="substeps" testItemId="129">
-          <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="130" title="Click the Show More Actions">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=showMoreActions&amp;pageId=pageobjects.AddRelatedSite"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Show More Actions</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="131" title="Click the New_">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=new_&amp;pageId=pageobjects.AddRelatedSite"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the New_</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="248" title="Sleep for {5} seconds">
-              <arguments>
-                <argument id="sleepSecs">
-                  <value class="value" valueClass="decimal">5</value>
-                </argument>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="132" title="Set the Sked_ Location__c to {Location}">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=sked_Location__c&amp;pageId=pageobjects.AddRelatedSite"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=set"/>
-                </argument>
-                <argument id="value">
-                  <value class="variable">
-                    <path element="Location"/>
-                  </value>
-                </argument>
-                <argument id="blur">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="pressEnter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Sked_ Location__c to {Location}</value>
-                </argument>
-                <argument id="autoRetry"/>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
-                  <summary>The value to be populated.</summary>
-                  <type>
-                    <textType>
-                      <constraints>
-                        <valueConstraint name="mimeType">text/plain</valueConstraint>
-                      </constraints>
-                    </textType>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
-                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
-                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="194" title="Sleep for {5} seconds">
-              <arguments>
-                <argument id="sleepSecs">
-                  <value class="value" valueClass="decimal">5</value>
-                </argument>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="133" title="Click the Save">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=save&amp;pageId=pageobjects.AddRelatedSite"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Save</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="437" title="Sleep for {10} seconds">
-              <arguments>
-                <argument id="sleepSecs">
-                  <value class="value" valueClass="decimal">10</value>
-                </argument>
-              </arguments>
-            </apiCall>
-          </steps>
-        </clause>
-      </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="uiTargetUrl" title="Web Page">
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-      </generatedParameters>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="14" title="On AccountTeamTabPageOnAccount page">
-      <tags/>
+    </caseCall>
+    <caseCall testCaseId="b3696c84-7db5-4ff5-8cfc-47f0d70b1ec2" testCasePath="tests/CallableTestCases/AddUserToCoveringRecruTeamOnAccountPage.testcase" testItemId="920">
       <arguments>
-        <argument id="uiConnectionName">
+        <argument id="reuseConnectionName">
           <value class="value" valueClass="string">drdprofile</value>
         </argument>
-        <argument id="target">
-          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.AccountTeamTabPageOnAccount"/>
+        <argument id="User">
+          <value class="variable">
+            <path element="User"/>
+          </value>
         </argument>
-        <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
-        </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On AccountTeamTabPageOnAccount page</value>
-        </argument>
-        <argument id="windowSelection">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="windowSize">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="closeWindow"/>
-        <argument id="captureBefore">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="captureAfter">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="uiTargetUrl"/>
       </arguments>
-      <clauses>
-        <clause name="substeps" testItemId="222">
-          <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="223" title="Click the Account Team">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=accountTeam&amp;pageId=pageobjects.AccountTeamTabPageOnAccount"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Account Team</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="224" title="Click the Account Team Member">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=AccountTeamMember&amp;pageId=pageobjects.AccountTeamTabPageOnAccount"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Account Team Member</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="225" title="Click the User">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=user&amp;pageId=pageobjects.AccountTeamTabPageOnAccount"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the User</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="226" title="Set the User Input to {Data.User}">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=userInput&amp;pageId=pageobjects.AccountTeamTabPageOnAccount"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=set"/>
-                </argument>
-                <argument id="value">
-                  <value class="variable">
-                    <path element="Data"/>
-                    <path element="User"/>
-                  </value>
-                </argument>
-                <argument id="blur">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="pressEnter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the User Input to {Data.User}</value>
-                </argument>
-                <argument id="autoRetry"/>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
-                  <summary>The value to be populated.</summary>
-                  <type>
-                    <textType>
-                      <constraints>
-                        <valueConstraint name="mimeType">text/plain</valueConstraint>
-                      </constraints>
-                    </textType>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
-                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
-                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="460" title="Sleep for {5} seconds">
-              <arguments>
-                <argument id="sleepSecs">
-                  <value class="value" valueClass="decimal">5</value>
-                </argument>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="462" title="Click the Team Role 1">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=teamRole1&amp;pageId=pageobjects.AccountTeamTabPageOnAccount"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">true</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Team Role 1</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="463" title="Click the Team Roleinpput 1">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=teamRoleinpput1&amp;pageId=pageobjects.AccountTeamTabPageOnAccount"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Team Roleinpput 1</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="464" title="Click the Account Manager">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=accountManager&amp;pageId=pageobjects.AccountTeamTabPageOnAccount"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Account Manager</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="229" title="Click the Edit Start Date Item 1">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=editStartDateItem1&amp;pageId=pageobjects.AccountTeamTabPageOnAccount"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Edit Start Date Item 1</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="230" title="Call the startDate method">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:method?pageId=pageobjects.AccountTeamTabPageOnAccount&amp;operation=startDate"/>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Call the startDate method</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=invoke"/>
-                </argument>
-                <argument id="pressEnter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="param_startDateAccTeam">
-                  <value class="funcCall" id="DateFormat">
-                    <argument id="date">
-                      <value class="funcCall" id="DateAdd">
-                        <argument id="date">
-                          <value class="variable">
-                            <path element="TODAY"/>
-                          </value>
-                        </argument>
-                        <argument id="amount">
-                          <value class="value" valueClass="decimal">10</value>
-                        </argument>
-                      </value>
-                    </argument>
-                    <argument id="outputFormat">
-                      <value class="value" valueClass="string">MM/dd/YYYY</value>
-                    </argument>
-                  </value>
-                </argument>
-                <argument id="value"/>
-                <argument id="blur"/>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="param_startDateAccTeam" title="Start Date Acc Team">
-                  <type>
-                    <textType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
-                  <summary>The value to be populated.</summary>
-                  <type>
-                    <textType>
-                      <constraints>
-                        <valueConstraint name="mimeType">text/plain</valueConstraint>
-                      </constraints>
-                    </textType>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
-                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
-                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="232" title="Click the Edit End Date Item 1">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=editEndDateItem1&amp;pageId=pageobjects.AccountTeamTabPageOnAccount"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Edit End Date Item 1</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="233" title="Call the endDate method">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:method?pageId=pageobjects.AccountTeamTabPageOnAccount&amp;operation=endDate"/>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Call the endDate method</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=invoke"/>
-                </argument>
-                <argument id="pressEnter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="param_endDateAccTeam">
-                  <value class="funcCall" id="DateFormat">
-                    <argument id="date">
-                      <value class="funcCall" id="DateAdd">
-                        <argument id="date">
-                          <value class="variable">
-                            <path element="TODAY"/>
-                          </value>
-                        </argument>
-                        <argument id="amount">
-                          <value class="value" valueClass="decimal">25</value>
-                        </argument>
-                      </value>
-                    </argument>
-                    <argument id="outputFormat">
-                      <value class="value" valueClass="string">MM/dd/YYYY</value>
-                    </argument>
-                  </value>
-                </argument>
-                <argument id="value"/>
-                <argument id="blur"/>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="param_endDateAccTeam" title="End Date Acc Team">
-                  <type>
-                    <textType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
-                  <summary>The value to be populated.</summary>
-                  <type>
-                    <textType>
-                      <constraints>
-                        <valueConstraint name="mimeType">text/plain</valueConstraint>
-                      </constraints>
-                    </textType>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
-                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
-                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="465" title="Call the addCoveringRecruManagement method">
-              <tags>
-                <string>disabled</string>
-              </tags>
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:method?operation=addCoveringRecruManagement&amp;pageId=pageobjects.AccountTeamTabPageOnAccount"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=invoke"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Call the addCoveringRecruManagement method</value>
-                </argument>
-                <argument id="beforeWait"/>
-                <argument id="afterWait"/>
-                <argument id="autoRetry"/>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="param_startDateAccTeam">
-                  <value class="funcCall" id="DateFormat">
-                    <argument id="date">
-                      <value class="funcCall" id="DateAdd">
-                        <argument id="date">
-                          <value class="variable">
-                            <path element="TODAY"/>
-                          </value>
-                        </argument>
-                        <argument id="amount">
-                          <value class="value" valueClass="decimal">10</value>
-                        </argument>
-                      </value>
-                    </argument>
-                    <argument id="outputFormat">
-                      <value class="value" valueClass="string">MM/dd/YYYY</value>
-                    </argument>
-                  </value>
-                </argument>
-                <argument id="param_endDateAccTeam">
-                  <value class="funcCall" id="DateFormat">
-                    <argument id="date">
-                      <value class="funcCall" id="DateAdd">
-                        <argument id="date">
-                          <value class="variable">
-                            <path element="TODAY"/>
-                          </value>
-                        </argument>
-                        <argument id="amount">
-                          <value class="value" valueClass="decimal">25</value>
-                        </argument>
-                      </value>
-                    </argument>
-                    <argument id="outputFormat">
-                      <value class="value" valueClass="string">MM/dd/YYYY</value>
-                    </argument>
-                  </value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="param_startDateAccTeam" title="Start Date Acc Team">
-                  <type>
-                    <textType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="param_endDateAccTeam" seq="1" title="End Date Acc Team">
-                  <type>
-                    <textType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="466" title="Click the Edit Coverage Reason Item 1">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=editCoverageReasonItem1&amp;pageId=pageobjects.AccountTeamTabPageOnAccount"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Edit Coverage Reason Item 1</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="467" title="Click the Coveragereadon Input">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=coveragereadonInput&amp;pageId=pageobjects.AccountTeamTabPageOnAccount"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Coveragereadon Input</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="468" title="Click the Leave Of Absence LOA">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=leaveOfAbsenceLOA&amp;pageId=pageobjects.AccountTeamTabPageOnAccount"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Leave Of Absence LOA</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="459" title="Click the Save Button">
-              <tags/>
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=saveButton&amp;pageId=pageobjects.AccountTeamTabPageOnAccount"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Save Button</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-          </steps>
-        </clause>
-      </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="uiTargetUrl" title="Web Page">
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-      </generatedParameters>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="44" title="On CreateTemplatePage page">
-      <tags/>
+    </caseCall>
+    <caseCall testCaseId="ff872117-4d7e-4f1d-a55b-dd2e9eadf255" testCasePath="tests/CallableTestCases/CreateTemplate.testcase" testItemId="921">
       <arguments>
-        <argument id="uiConnectionName">
+        <argument id="reuseConnectionName">
           <value class="value" valueClass="string">drdprofile</value>
         </argument>
-        <argument id="target">
-          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.CreateTemplatePage"/>
+        <argument id="WBP">
+          <value class="variable">
+            <path element="Data"/>
+            <path element="WBP"/>
+          </value>
         </argument>
-        <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
+        <argument id="DRP">
+          <value class="variable">
+            <path element="Data"/>
+            <path element="DRP"/>
+          </value>
         </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On CreateTemplatePage page</value>
+        <argument id="ARD">
+          <value class="variable">
+            <path element="Data"/>
+            <path element="ARD"/>
+          </value>
         </argument>
-        <argument id="windowSelection">
-          <value class="value" valueClass="string">Default</value>
+        <argument id="DriveKeyword">
+          <value class="variable">
+            <path element="DriveKeyword"/>
+          </value>
         </argument>
-        <argument id="windowSize">
-          <value class="value" valueClass="string">Default</value>
+        <argument id="StartTime">
+          <value class="variable">
+            <path element="StartTime"/>
+          </value>
         </argument>
-        <argument id="closeWindow"/>
-        <argument id="captureBefore">
-          <value class="value" valueClass="string">false</value>
+        <argument id="EndTime">
+          <value class="variable">
+            <path element="EndTime"/>
+          </value>
         </argument>
-        <argument id="captureAfter">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="uiTargetUrl"/>
       </arguments>
-      <clauses>
-        <clause name="substeps" testItemId="135">
-          <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="136" title="Click the Create A Template">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=CreateATemplate&amp;pageId=pageobjects.CreateTemplatePage"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Create A Template</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="253" title="Sleep for {5} seconds">
-              <arguments>
-                <argument id="sleepSecs">
-                  <value class="value" valueClass="decimal">5</value>
-                </argument>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="137" title="Click the Select Site">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=selectSite&amp;pageId=pageobjects.CreateTemplatePage"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Select Site</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="138" title="Click the Next">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=next&amp;pageId=pageobjects.CreateTemplatePage"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Next</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="254" title="Sleep for {5} seconds">
-              <arguments>
-                <argument id="sleepSecs">
-                  <value class="value" valueClass="decimal">5</value>
-                </argument>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="257" title="Call the selectStartTime method">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:method?operation=selectStartTime&amp;pageId=pageobjects.CreateTemplatePage"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=invoke"/>
-                </argument>
-                <argument id="pressEnter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Call the selectStartTime method</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="param_StartTime">
-                  <value class="variable">
-                    <path element="StartTime"/>
-                  </value>
-                </argument>
-                <argument id="value"/>
-                <argument id="blur"/>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="param_StartTime" title="Start Time">
-                  <type>
-                    <textType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
-                  <summary>The value to be populated.</summary>
-                  <type>
-                    <choiceType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
-                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
-                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="238" title="Call the selectEndTime method">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:method?operation=selectEndTime&amp;pageId=pageobjects.CreateTemplatePage"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=invoke"/>
-                </argument>
-                <argument id="pressEnter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Call the selectEndTime method</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="param_endTime">
-                  <value class="variable">
-                    <path element="EndTime"/>
-                  </value>
-                </argument>
-                <argument id="value"/>
-                <argument id="blur"/>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="param_endTime" title="End Time">
-                  <type>
-                    <textType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
-                  <summary>The value to be populated.</summary>
-                  <type>
-                    <choiceType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
-                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
-                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="142" title="Set the Whole Blood Procedures to {Data.WBP}">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=wholeBloodProcedures&amp;pageId=pageobjects.CreateTemplatePage"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=set"/>
-                </argument>
-                <argument id="value">
-                  <value class="variable">
-                    <path element="Data"/>
-                    <path element="WBP"/>
-                  </value>
-                </argument>
-                <argument id="blur">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="pressEnter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Whole Blood Procedures to {Data.WBP}</value>
-                </argument>
-                <argument id="autoRetry"/>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
-                  <summary>The value to be populated.</summary>
-                  <type>
-                    <textType>
-                      <constraints>
-                        <valueConstraint name="mimeType">text/plain</valueConstraint>
-                      </constraints>
-                    </textType>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
-                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
-                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="154" title="Set the Double Red Procedures to {Data.DRP}">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=doubleRedProcedures&amp;pageId=pageobjects.CreateTemplatePage"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=set"/>
-                </argument>
-                <argument id="value">
-                  <value class="variable">
-                    <path element="Data"/>
-                    <path element="DRP"/>
-                  </value>
-                </argument>
-                <argument id="blur">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="pressEnter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Double Red Procedures to {Data.DRP}</value>
-                </argument>
-                <argument id="autoRetry"/>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
-                  <summary>The value to be populated.</summary>
-                  <type>
-                    <textType>
-                      <constraints>
-                        <valueConstraint name="mimeType">text/plain</valueConstraint>
-                      </constraints>
-                    </textType>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
-                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
-                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="151" title="Set the Anticipated Registered Donors to {Data.ARD}">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=anticipatedRegisteredDonors&amp;pageId=pageobjects.CreateTemplatePage"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=set"/>
-                </argument>
-                <argument id="value">
-                  <value class="variable">
-                    <path element="Data"/>
-                    <path element="ARD"/>
-                  </value>
-                </argument>
-                <argument id="blur">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="pressEnter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Anticipated Registered Donors to {Data.ARD}</value>
-                </argument>
-                <argument id="autoRetry"/>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
-                  <summary>The value to be populated.</summary>
-                  <type>
-                    <textType>
-                      <constraints>
-                        <valueConstraint name="mimeType">text/plain</valueConstraint>
-                      </constraints>
-                    </textType>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
-                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
-                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="145" title="Set the Drive Keyword to {DriveKeyword}">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=driveKeyword&amp;pageId=pageobjects.CreateTemplatePage"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=set"/>
-                </argument>
-                <argument id="value">
-                  <value class="variable">
-                    <path element="DriveKeyword"/>
-                  </value>
-                </argument>
-                <argument id="blur">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="pressEnter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Drive Keyword to {DriveKeyword}</value>
-                </argument>
-                <argument id="autoRetry"/>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
-                  <summary>The value to be populated.</summary>
-                  <type>
-                    <textType>
-                      <constraints>
-                        <valueConstraint name="mimeType">text/plain</valueConstraint>
-                      </constraints>
-                    </textType>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
-                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
-                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="146" title="Check the Accept 56 Days Rule Violation">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=Accept56DaysRuleViolation&amp;pageId=pageobjects.CreateTemplatePage"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=check"/>
-                </argument>
-                <argument id="blur">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="pressEnter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Check the Accept 56 Days Rule Violation</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="ieClickMethod" seq="10000" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="147" title="Click the Next 1">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=next1&amp;pageId=pageobjects.CreateTemplatePage"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Next 1</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="251" title="Sleep for {5} seconds">
-              <arguments>
-                <argument id="sleepSecs">
-                  <value class="value" valueClass="decimal">5</value>
-                </argument>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="148" title="Click the Next 2">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=next2&amp;pageId=pageobjects.CreateTemplatePage"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Next 2</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="149" title="UI Assert">
-              <arguments>
-                <argument id="resultName">
-                  <value class="value" valueClass="string">Values</value>
-                </argument>
-                <argument id="resultScope">
-                  <value class="value" valueClass="string">Test</value>
-                </argument>
-                <argument id="fieldAssertions">
-                  <value class="valueList" mutable="Mutable">
-                    <uiFieldAssertion resultName="checkTemplateIsCreated">
-                      <fieldLocator uri="ui:pageobject:field?field=checkTemplateIsCreated&amp;pageId=pageobjects.CreateTemplatePage"/>
-                      <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo" normalize="true">
-                          <value class="value" valueClass="string">The Opportunity record was successfully created.</value>
-                        </uiAttributeAssertion>
-                      </attributeAssertions>
-                    </uiFieldAssertion>
-                  </value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="columnAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="pageAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="beforeWait"/>
-                <argument id="autoRetry"/>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="158" title="Click the Finish">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=finish&amp;pageId=pageobjects.CreateTemplatePage"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Finish</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="457" title="Sleep for {10} seconds">
-              <arguments>
-                <argument id="sleepSecs">
-                  <value class="value" valueClass="decimal">10</value>
-                </argument>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiNavigate" name="UiNavigate" testItemId="195" title="Navigate: Refresh">
-              <tags/>
-              <arguments>
-                <argument id="navigate">
-                  <value class="value" valueClass="string">Refresh</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="450" title="Sleep for {10} seconds">
-              <arguments>
-                <argument id="sleepSecs">
-                  <value class="value" valueClass="decimal">10</value>
-                </argument>
-              </arguments>
-            </apiCall>
-          </steps>
-        </clause>
-      </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="uiTargetUrl" title="Web Page">
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-      </generatedParameters>
-    </apiCall>
+    </caseCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="45" title="On PlanADrivePageOnAccount page">
       <arguments>
         <argument id="uiConnectionName">
@@ -3652,10 +1059,10 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="344" title="Set the Target Ask Date to {TargetAskDate}">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="344" title="Set the Target Ask Date Only to {TargetAskDate}">
               <arguments>
                 <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=targetAskDate&amp;pageId=pageobjects.PlanADrivePageOnAccount"/>
+                  <value class="uiLocator" uri="ui:pageobject:field?field=targetAskDateOnly&amp;pageId=pageobjects.PlanADrivePageOnAccount"/>
                 </argument>
                 <argument id="interaction">
                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
@@ -3684,7 +1091,7 @@
                   <value class="uiWait" uri="default"/>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Target Ask Date to {TargetAskDate}</value>
+                  <value class="value" valueClass="string">Set the Target Ask Date Only to {TargetAskDate}</value>
                 </argument>
                 <argument id="autoRetry"/>
               </arguments>
@@ -3917,264 +1324,23 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="684" title="On BloodDriveTabPageOnAccount page">
+    <caseCall testCaseId="a298a048-4d06-4812-bac9-7baa139c68a5" testCasePath="tests/CallableTestCases/ClickOppoNameOnBloodDriveTabOnAccount.testcase" testItemId="932">
       <arguments>
-        <argument id="uiConnectionName">
+        <argument id="reuseConnectionName">
           <value class="value" valueClass="string">drdprofile</value>
         </argument>
-        <argument id="target">
-          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.BloodDriveTabPageOnAccount"/>
+        <argument id="Company">
+          <value class="variable">
+            <path element="Company"/>
+          </value>
         </argument>
-        <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
+        <argument id="Location">
+          <value class="variable">
+            <path element="Location1"/>
+          </value>
         </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On BloodDriveTabPageOnAccount page</value>
-        </argument>
-        <argument id="windowSelection">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="windowSize">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="closeWindow"/>
-        <argument id="captureBefore">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="captureAfter">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="uiTargetUrl"/>
       </arguments>
-      <clauses>
-        <clause name="substeps" testItemId="424">
-          <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="425" title="Click the Blood Drives">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=bloodDrives&amp;pageId=pageobjects.BloodDriveTabPageOnAccount"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Blood Drives</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="426" title="Sleep for {5} seconds">
-              <arguments>
-                <argument id="sleepSecs">
-                  <value class="value" valueClass="decimal">5</value>
-                </argument>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="427" title="Call the clickOppNameOnBloodDriveTab method">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:method?operation=clickOppNameOnBloodDriveTab&amp;pageId=pageobjects.BloodDriveTabPageOnAccount"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=invoke"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">true</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="ui:wait:timed?seconds=10"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Call the clickOppNameOnBloodDriveTab method</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-                <argument id="param_OppName">
-                  <value class="variable">
-                    <path element="Data"/>
-                    <path element="Company"/>
-                  </value>
-                </argument>
-                <argument id="param_Location">
-                  <value class="variable">
-                    <path element="Data"/>
-                    <path element="Location1"/>
-                  </value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="param_OppName" title="Opp Name">
-                  <type>
-                    <textType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="param_Location" seq="1" title="Location">
-                  <type>
-                    <textType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="120" title="Sleep for {7} seconds">
-              <arguments>
-                <argument id="sleepSecs">
-                  <value class="value" valueClass="decimal">7</value>
-                </argument>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiNavigate" name="UiNavigate" testItemId="271" title="Navigate: Refresh">
-              <tags>
-                <string>disabled</string>
-              </tags>
-              <arguments>
-                <argument id="navigate">
-                  <value class="value" valueClass="string">Refresh</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="118" title="Click the Click Opp Name">
-              <tags>
-                <string>disabled</string>
-              </tags>
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=ClickOppName&amp;pageId=pageobjects.BloodDriveTabPageOnAccount"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">true</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Click Opp Name</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="272" title="Sleep for {7} seconds">
-              <arguments>
-                <argument id="sleepSecs">
-                  <value class="value" valueClass="decimal">7</value>
-                </argument>
-              </arguments>
-            </apiCall>
-          </steps>
-        </clause>
-      </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="uiTargetUrl" title="Web Page">
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-      </generatedParameters>
-    </apiCall>
+    </caseCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="58" title="On BllodDriveOppotyunityPage page">
       <arguments>
         <argument id="uiConnectionName">
@@ -4472,244 +1638,105 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="64" title="Sleep for {5} seconds">
+                      <arguments>
+                        <argument id="sleepSecs">
+                          <value class="value" valueClass="decimal">5</value>
+                        </argument>
+                      </arguments>
+                    </apiCall>
                   </steps>
                 </clause>
               </clauses>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="64" title="Sleep for {5} seconds">
-              <arguments>
-                <argument id="sleepSecs">
-                  <value class="value" valueClass="decimal">5</value>
-                </argument>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiNavigate" name="UiNavigate" testItemId="476" title="Navigate: Refresh">
-              <tags/>
-              <arguments>
-                <argument id="navigate">
-                  <value class="value" valueClass="string">Refresh</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="65" title="Click the Drive Scheduling">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=driveScheduling&amp;pageId=pageobjects.BllodDriveOppotyunityPage"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Drive Scheduling</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="473" title="Sleep for {10} seconds">
-              <arguments>
-                <argument id="sleepSecs">
-                  <value class="value" valueClass="decimal">10</value>
-                </argument>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="66" title="Call the clickDriveOnCalenderRecordOnOpp method">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:method?operation=clickDriveOnCalenderRecordOnOpp&amp;pageId=pageobjects.BllodDriveOppotyunityPage"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=invoke"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Call the clickDriveOnCalenderRecordOnOpp method</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-                <argument id="param_OppName">
-                  <value class="variable">
-                    <path element="Data"/>
-                    <path element="Company"/>
-                  </value>
-                </argument>
-                <argument id="param_Location">
-                  <value class="variable">
-                    <path element="Data"/>
-                    <path element="Location"/>
-                  </value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="param_OppName" title="Opp Name">
-                  <type>
-                    <textType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="param_Location" seq="1" title="Location">
-                  <type>
-                    <textType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="478" title="Sleep for {10} seconds">
-              <arguments>
-                <argument id="sleepSecs">
-                  <value class="value" valueClass="decimal">10</value>
-                </argument>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiNavigate" name="UiNavigate" testItemId="477" title="Navigate: Refresh">
-              <tags>
-                <string>disabled</string>
-              </tags>
-              <arguments>
-                <argument id="navigate">
-                  <value class="value" valueClass="string">Refresh</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="67" title="Click the Drive Name On Doc">
-              <tags>
-                <string>disabled</string>
-              </tags>
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=DriveNameOnDoc&amp;pageId=pageobjects.BllodDriveOppotyunityPage"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Drive Name On Doc</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
             </apiCall>
           </steps>
         </clause>
       </clauses>
       <generatedParameters>
         <apiParam group="target" name="uiTargetUrl" title="Web Page">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="926" title="SOQL Query: select Id  from sked_Drive__c where sked_Account__c  IN (select Id from Account where Name='{Company}' )=&gt;OpportunityRows">
+      <arguments>
+        <argument id="soqlQuery">
+          <value class="compound">
+            <parts>
+              <value valueClass="string">select Id  from sked_Drive__c where sked_Account__c  IN (select Id from Account where Name='</value>
+              <variable>
+                <path element="Company"/>
+              </variable>
+              <value valueClass="string">' )</value>
+            </parts>
+          </value>
+        </argument>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">drdprofile</value>
+        </argument>
+        <argument id="resultListName">
+          <value class="value" valueClass="string">OpportunityRows</value>
+        </argument>
+        <argument id="soqlColumnAliases">
+          <value class="valueList" mutable="Mutable"/>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="928" title="On SF Drives on Calendar View screen">
+      <arguments>
+        <argument id="uiConnectionName">
+          <value class="value" valueClass="string">drdprofile</value>
+        </argument>
+        <argument id="target">
+          <value class="uiTarget" uri="sf:ui:target?object=sked_Drive__c&amp;action=View&amp;recordType=%3Cdefault%3E"/>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On SF Drives on Calendar View screen</value>
+        </argument>
+        <argument id="navigate">
+          <value class="value" valueClass="string">Always</value>
+        </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Maximize</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore">
+          <value class="value" valueClass="string">true</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="sfUiTargetObjectId">
+          <value class="variable">
+            <path element="OpportunityRows"/>
+            <path element="Id"/>
+          </value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="929">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="930" title="Sleep for {10} seconds">
+              <arguments>
+                <argument id="sleepSecs">
+                  <value class="value" valueClass="decimal">10</value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+      <generatedParameters>
+        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
+          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
           <type>
             <textType/>
           </type>
@@ -4852,7 +1879,7 @@
                   <value class="value" valueClass="string">false</value>
                 </argument>
                 <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
+                  <value class="uiWait" uri="ui:wait:timed?seconds=10"/>
                 </argument>
                 <argument id="afterWait">
                   <value class="uiWait" uri="default"/>

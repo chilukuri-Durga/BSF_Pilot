@@ -1,8 +1,10 @@
 package pageobjects;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,6 +14,7 @@ import com.provar.core.testapi.annotations.*;
 @Page(title = "DriveOnCalenderPage", summary = "", relativeUrl = "", connection = "DRDprofile")
 public class DriveOnCalenderPage {
 
+  public Logger testLogger;
 	WebDriver driver;
 
 	public DriveOnCalenderPage(WebDriver driver) {
@@ -58,6 +61,9 @@ public class DriveOnCalenderPage {
 	@TextType()
 	@FindBy(xpath = "//*[contains(text(),'Operation Records (1)')]")
 	public WebElement OperationRecCreated;
+	
+
+
 
 	public void resolveContentions() throws InterruptedException {
 
@@ -81,6 +87,17 @@ public class DriveOnCalenderPage {
 
 	}
 
+   public void getOperationRecord(){
+   WebElement OpertionRecord=driver.findElement(By.xpath("//*[contains(text(),'Operation Records')]/ancestor::div[@class='slds-is-relative']/descendant::a"));
+   
+   JavascriptExecutor js = (JavascriptExecutor) driver;
+   js.executeScript("arguments[0].scrollIntoView(true);", OpertionRecord);
+   
+   String OperationRecordNum=OpertionRecord.getText().trim();
+    testLogger.info("OperationRecordNumber is:" + OperationRecordNum);
+   
+   }
+   
 	@TextType()
 	@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//p[normalize-space(.)='Do you want to continue resolve the contentions?']")
 	public WebElement doyouwanttoContinueResolveCont_;
